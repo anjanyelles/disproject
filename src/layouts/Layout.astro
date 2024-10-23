@@ -1,0 +1,40 @@
+---
+export interface Props {
+  title: string;
+  metaDescription?: string;
+}
+
+const { title, metaDescription } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Noto+Sans:300,400,500,600,700,800|PT+Mono:300,400,500,600,700"
+      rel="stylesheet"
+    />
+    <title>Disasha</title>
+    <meta name="description" content={metaDescription} />
+    <meta name="generator" content={Astro.generator} />
+
+
+  </head>
+  <body class="overflow-x-hidden">
+
+    <slot />
+  </body>
+  <script
+    src="https://kit.fontawesome.com/349ee9c857.js"
+    crossOrigin="anonymous"
+  ></script>
+</html>
+<style is:global>
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+</style>

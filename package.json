@@ -27,11 +27,12 @@
     "@astrojs/react": "^3.0.2",
     "@astrojs/tailwind": "^5.0.0",
     "@heroicons/react": "^2.0.16",
-    "astro": "^3.1.4",
+    "@material-tailwind/react": "^2.1.10",
+    "astro": "^4.16.7",
     "forward-ref": "^1.0.0",
+    "framer-motion": "^10.12.16",
     "fs-extra": "^11.1.1",
-    "json-server": "^0.17.0",
-    "framer-motion": "^10.12.16"
+    "json-server": "^0.17.0"
   },
   "devDependencies": {
     "sass": "^1.55.0",

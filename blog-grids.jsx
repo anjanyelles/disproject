@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Play Tailwind</title>
+  <title>Blog Grids |</title>
   <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
   <link rel="stylesheet" href="assets/css/animate.css" />
   <link rel="stylesheet" href="assets/css/tailwind.css" />
@@ -40,7 +40,7 @@
               class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white dark:bg-dark-2 py-5 shadow-lg lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent dark:lg:bg-transparent lg:py-0 lg:px-4 lg:shadow-none xl:px-6">
               <ul class="blcok lg:flex 2xl:ml-20">
                 <li class="relative group">
-                  <a href="#home"
+                  <a href="/#home"
                     class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark dark:text-white group-hover:text-primary lg:mr-0 lg:inline-flex lg:py-6 lg:px-0 lg:text-body-color dark:lg:text-dark-6">
                     Home
                   </a>
@@ -97,11 +97,11 @@
                       Pricing Page
                     </a>
                     <a href="contact.html"
-                      class="block rounded py-[10px] px-4 text-sm text-primary hover:text-primary dark:hover:text-primary">
+                      class="block rounded py-[10px] px-4 text-sm text-body-color dark:text-dark-6 hover:text-primary dark:hover:text-primary">
                       Contact Page
                     </a>
                     <a href="blog-grids.html"
-                      class="block rounded py-[10px] px-4 text-sm text-body-color dark:text-dark-6 hover:text-primary dark:hover:text-primary">
+                      class="block rounded py-[10px] px-4 text-sm text-primary hover:text-primary dark:hover:text-primary">
                       Blog Grid Page
                     </a>
                     <a href="blog-details.html"
@@ -216,7 +216,7 @@
         <div class="w-full px-4">
           <div class="text-center">
             <h1 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
-              Contact Page</h1>
+              Blog Grid</h1>
             <p class="mb-5 text-base text-body-color dark:text-dark-6">
               There are many variations of passages of Lorem Ipsum available.
             </p>
@@ -231,7 +231,7 @@
               <li>
                 <a href="javascript:void(0)" class="flex items-center gap-[10px] text-base font-medium text-body-color">
                   <span class="text-body-color dark:text-dark-6"> / </span>
-                  Contact us
+                  Blog Grid
                 </a>
               </li>
             </ul>
@@ -242,99 +242,303 @@
   </div>
   <!-- ====== Banner Section End -->
 
-  <!-- ====== Contact Start ====== -->
-  <section id="contact" class="relative py-20 md:py-[120px]">
-    <div class="absolute top-0 left-0 -z-[1] w-full dark:bg-dark h-full"></div>
-    <div class="absolute top-0 left-0 -z-[1] h-1/2 w-full bg-[#E9F9FF] dark:bg-dark-700 lg:h-[45%] xl:h-1/2"></div>
-    <div class="container px-4">
-      <div class="flex flex-wrap items-center -mx-4">
-        <div class="w-full px-4 lg:w-7/12 xl:w-8/12">
-          <div class="ud-contact-content-wrapper">
-            <div class="ud-contact-title mb-12 lg:mb-[150px]">
-              <span class="block mb-6 text-base font-medium text-dark dark:text-white">
-                CONTACT US
-              </span>
-              <h2 class="max-w-[260px] text-[35px] leading-[1.14] font-semibold text-dark dark:text-white">
-                Let's talk about your problem.
-              </h2>
+  <!-- ====== Blog Section Start -->
+  <section class="pt-20 pb-10 lg:pt-[120px] lg:pb-20 dark:bg-dark">
+    <div class="container">
+      <div class="flex flex-wrap -mx-4">
+        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+          <div class="mb-10 wow fadeInUp group" data-wow-delay=".1s">
+            <div class="mb-8 overflow-hidden rounded-[5px]">
+              <a href="blog-details.html" class="block">
+                <img src="assets/images/blog/blog-01.jpg" alt="image"
+                  class="w-full transition group-hover:rotate-6 group-hover:scale-125" />
+              </a>
             </div>
-            <div class="flex flex-wrap justify-between mb-12 lg:mb-0">
-              <div class="mb-8 flex w-[330px] max-w-full">
-                <div class="mr-6 text-[32px] text-primary">
-                  <svg width="29" height="35" viewBox="0 0 29 35" class="fill-current">
-                    <path
-                      d="M14.5 0.710938C6.89844 0.710938 0.664062 6.72656 0.664062 14.0547C0.664062 19.9062 9.03125 29.5859 12.6406 33.5234C13.1328 34.0703 13.7891 34.3437 14.5 34.3437C15.2109 34.3437 15.8672 34.0703 16.3594 33.5234C19.9688 29.6406 28.3359 19.9062 28.3359 14.0547C28.3359 6.67188 22.1016 0.710938 14.5 0.710938ZM14.9375 32.2109C14.6641 32.4844 14.2812 32.4844 14.0625 32.2109C11.3828 29.3125 2.57812 19.3594 2.57812 14.0547C2.57812 7.71094 7.9375 2.625 14.5 2.625C21.0625 2.625 26.4219 7.76562 26.4219 14.0547C26.4219 19.3594 17.6172 29.2578 14.9375 32.2109Z" />
-                    <path
-                      d="M14.5 8.58594C11.2734 8.58594 8.59375 11.2109 8.59375 14.4922C8.59375 17.7188 11.2187 20.3984 14.5 20.3984C17.7812 20.3984 20.4062 17.7734 20.4062 14.4922C20.4062 11.2109 17.7266 8.58594 14.5 8.58594ZM14.5 18.4297C12.3125 18.4297 10.5078 16.625 10.5078 14.4375C10.5078 12.25 12.3125 10.4453 14.5 10.4453C16.6875 10.4453 18.4922 12.25 18.4922 14.4375C18.4922 16.625 16.6875 18.4297 14.5 18.4297Z" />
-                  </svg>
-                </div>
-                <div>
-                  <h5 class="mb-[18px] text-lg font-semibold text-dark dark:text-white">Our Location</h5>
-                  <p class="text-base text-body-color dark:text-dark-6">
-                    401 Broadway, 24th Floor, Orchard Cloud View, London
-                  </p>
-                </div>
-              </div>
-              <div class="mb-8 flex w-[330px] max-w-full">
-                <div class="mr-6 text-[32px] text-primary">
-                  <svg width="34" height="25" viewBox="0 0 34 25" class="fill-current">
-                    <path
-                      d="M30.5156 0.960938H3.17188C1.42188 0.960938 0 2.38281 0 4.13281V20.9219C0 22.6719 1.42188 24.0938 3.17188 24.0938H30.5156C32.2656 24.0938 33.6875 22.6719 33.6875 20.9219V4.13281C33.6875 2.38281 32.2656 0.960938 30.5156 0.960938ZM30.5156 2.875C30.7891 2.875 31.0078 2.92969 31.2266 3.09375L17.6094 11.3516C17.1172 11.625 16.5703 11.625 16.0781 11.3516L2.46094 3.09375C2.67969 2.98438 2.89844 2.875 3.17188 2.875H30.5156ZM30.5156 22.125H3.17188C2.51562 22.125 1.91406 21.5781 1.91406 20.8672V5.00781L15.0391 12.9922C15.5859 13.3203 16.1875 13.4844 16.7891 13.4844C17.3906 13.4844 17.9922 13.3203 18.5391 12.9922L31.6641 5.00781V20.8672C31.7734 21.5781 31.1719 22.125 30.5156 22.125Z" />
-                  </svg>
-                </div>
-                <div>
-                  <h5 class="mb-[18px] text-lg font-semibold text-dark dark:text-white">How Can We Help?</h5>
-                  <p class="text-base text-body-color dark:text-dark-6">info@yourdomain.com</p>
-                  <p class="mt-1 text-base text-body-color dark:text-dark-6">
-                    contact@yourdomain.com
-                  </p>
-                </div>
-              </div>
+            <div>
+              <span
+                class="inline-block px-4 py-0.5 mb-6 text-xs font-medium leading-loose text-center text-white rounded-[5px] bg-primary">
+                Dec 22, 2023
+              </span>
+              <h3>
+                <a href="blog-details.html"
+                  class="inline-block mb-4 text-xl font-semibold text-dark dark:text-white hover:text-primary dark:hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl">
+                  Meet AutoManage, the best AI management tools
+                </a>
+              </h3>
+              <p class="max-w-[370px] text-base text-body-color dark:text-dark-6">
+                Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry.
+              </p>
             </div>
           </div>
         </div>
-        <div class="w-full px-4 lg:w-5/12 xl:w-4/12">
-          <div
-            class="wow fadeInUp rounded-lg bg-white dark:bg-dark-2 py-10 px-8 shadow-testimonial dark:shadow-none sm:py-12 sm:px-10 md:p-[60px] lg:p-10 lg:py-12 lg:px-10 2xl:p-[60px]"
-            data-wow-delay=".2s
-                ">
-            <h3 class="mb-8 text-2xl font-semibold md:text-[28px] md:leading-[1.42] text-dark dark:text-white">
-              Send us a Message
-            </h3>
-            <form>
-              <div class="mb-[22px]">
-                <label for="fullName" class="block mb-4 text-sm text-body-color dark:text-dark-6">Full Name*</label>
-                <input type="text" name="fullName" placeholder="Adam Gelius"
-                  class="bg-transparent w-full text-body-color dark:text-dark-6 placeholder:text-body-color/60 border-0 border-b border-[#f1f1f1] dark:border-dark-3 pb-3 focus:border-primary focus:outline-none" />
-              </div>
-              <div class="mb-[22px]">
-                <label for="email" class="block mb-4 text-sm text-body-color dark:text-dark-6">Email*</label>
-                <input type="email" name="email" placeholder="example@yourmail.com"
-                  class="bg-transparent w-full text-body-color dark:text-dark-6 placeholder:text-body-color/60 border-0 border-b border-[#f1f1f1] dark:border-dark-3 pb-3 focus:border-primary focus:outline-none" />
-              </div>
-              <div class="mb-[22px]">
-                <label for="phone" class="block mb-4 text-sm text-body-color dark:text-dark-6">Phone*</label>
-                <input type="text" name="phone" placeholder="+885 1254 5211 552"
-                  class="bg-transparent w-full text-body-color dark:text-dark-6 placeholder:text-body-color/60 border-0 border-b border-[#f1f1f1] dark:border-dark-3 pb-3 focus:border-primary focus:outline-none" />
-              </div>
-              <div class="mb-[30px]">
-                <label for="message" class="block mb-4 text-sm text-body-color dark:text-dark-6">Message*</label>
-                <textarea name="message" rows="1" placeholder="type your message here"
-                  class="bg-transparent w-full text-body-color dark:text-dark-6 placeholder:text-body-color/60 resize-none border-0 border-b border-[#f1f1f1] dark:border-dark-3 pb-3 focus:border-primary focus:outline-none"></textarea>
-              </div>
-              <div class="mb-0">
-                <button type="submit"
-                  class="inline-flex items-center justify-center px-10 py-3 text-base font-medium text-white transition duration-300 ease-in-out rounded-md bg-primary hover:bg-blue-dark">
-                  Send
-                </button>
-              </div>
-            </form>
+        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+          <div class="mb-10 wow fadeInUp group" data-wow-delay=".15s">
+            <div class="mb-8 overflow-hidden rounded-[5px]">
+              <a href="blog-details.html" class="block">
+                <img src="assets/images/blog/blog-02.jpg" alt="image"
+                  class="w-full transition group-hover:rotate-6 group-hover:scale-125" />
+              </a>
+            </div>
+            <div>
+              <span
+                class="inline-block px-4 py-0.5 mb-6 text-xs font-medium leading-loose text-center text-white rounded-[5px] bg-primary">
+                Mar 15, 2023
+              </span>
+              <h3>
+                <a href="blog-details.html"
+                  class="inline-block mb-4 text-xl font-semibold text-dark dark:text-white hover:text-primary dark:hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl">
+                  How to earn more money as a wellness coach
+                </a>
+              </h3>
+              <p class="max-w-[370px] text-base text-body-color dark:text-dark-6">
+                Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry.
+              </p>
+            </div>
           </div>
+        </div>
+        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+          <div class="mb-10 wow fadeInUp group" data-wow-delay=".2s">
+            <div class="mb-8 overflow-hidden rounded-[5px]">
+              <a href="blog-details.html" class="block">
+                <img src="assets/images/blog/blog-03.jpg" alt="image"
+                  class="w-full transition group-hover:rotate-6 group-hover:scale-125" />
+              </a>
+            </div>
+            <div>
+              <span
+                class="inline-block px-4 py-0.5 mb-6 text-xs font-medium leading-loose text-center text-white rounded-[5px] bg-primary">
+                Jan 05, 2023
+              </span>
+              <h3>
+                <a href="blog-details.html"
+                  class="inline-block mb-4 text-xl font-semibold text-dark dark:text-white hover:text-primary dark:hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl">
+                  The no-fuss guide to upselling and cross selling
+                </a>
+              </h3>
+              <p class="max-w-[370px] text-base text-body-color dark:text-dark-6">
+                Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+          <div class="mb-10 wow fadeInUp group" data-wow-delay=".1s">
+            <div class="mb-8 overflow-hidden rounded-[5px]">
+              <a href="blog-details.html" class="block">
+                <img src="assets/images/blog/blog-02.jpg" alt="image"
+                  class="w-full transition group-hover:rotate-6 group-hover:scale-125" />
+              </a>
+            </div>
+            <div>
+              <span
+                class="inline-block px-4 py-0.5 mb-6 text-xs font-medium leading-loose text-center text-white rounded-[5px] bg-primary">
+                Mar 15, 2023
+              </span>
+              <h3>
+                <a href="blog-details.html"
+                  class="inline-block mb-4 text-xl font-semibold text-dark dark:text-white hover:text-primary dark:hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl">
+                  How to earn more money as a wellness coach
+                </a>
+              </h3>
+              <p class="max-w-[370px] text-base text-body-color dark:text-dark-6">
+                Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+          <div class="mb-10 wow fadeInUp group" data-wow-delay=".15s">
+            <div class="mb-8 overflow-hidden rounded-[5px]">
+              <a href="blog-details.html" class="block">
+                <img src="assets/images/blog/blog-03.jpg" alt="image"
+                  class="w-full transition group-hover:rotate-6 group-hover:scale-125" />
+              </a>
+            </div>
+            <div>
+              <span
+                class="inline-block px-4 py-0.5 mb-6 text-xs font-medium leading-loose text-center text-white rounded-[5px] bg-primary">
+                Jan 05, 2023
+              </span>
+              <h3>
+                <a href="blog-details.html"
+                  class="inline-block mb-4 text-xl font-semibold text-dark dark:text-white hover:text-primary dark:hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl">
+                  The no-fuss guide to upselling and cross selling
+                </a>
+              </h3>
+              <p class="max-w-[370px] text-base text-body-color dark:text-dark-6">
+                Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+          <div class="mb-10 wow fadeInUp group" data-wow-delay=".2s">
+            <div class="mb-8 overflow-hidden rounded-[5px]">
+              <a href="blog-details.html" class="block">
+                <img src="assets/images/blog/blog-01.jpg" alt="image"
+                  class="w-full transition group-hover:rotate-6 group-hover:scale-125" />
+              </a>
+            </div>
+            <div>
+              <span
+                class="inline-block px-4 py-0.5 mb-6 text-xs font-medium leading-loose text-center text-white rounded-[5px] bg-primary">
+                Dec 22, 2023
+              </span>
+              <h3>
+                <a href="blog-details.html"
+                  class="inline-block mb-4 text-xl font-semibold text-dark dark:text-white hover:text-primary dark:hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl">
+                  Meet AutoManage, the best AI management tools
+                </a>
+              </h3>
+              <p class="max-w-[370px] text-base text-body-color dark:text-dark-6">
+                Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+          <div class="mb-10 wow fadeInUp group" data-wow-delay=".1s">
+            <div class="mb-8 overflow-hidden rounded-[5px]">
+              <a href="blog-details.html" class="block">
+                <img src="assets/images/blog/blog-01.jpg" alt="image"
+                  class="w-full transition group-hover:rotate-6 group-hover:scale-125" />
+              </a>
+            </div>
+            <div>
+              <span
+                class="inline-block px-4 py-0.5 mb-6 text-xs font-medium leading-loose text-center text-white rounded-[5px] bg-primary">
+                Dec 22, 2023
+              </span>
+              <h3>
+                <a href="blog-details.html"
+                  class="inline-block mb-4 text-xl font-semibold text-dark dark:text-white hover:text-primary dark:hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl">
+                  Meet AutoManage, the best AI management tools
+                </a>
+              </h3>
+              <p class="max-w-[370px] text-base text-body-color dark:text-dark-6">
+                Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+          <div class="mb-10 wow fadeInUp group" data-wow-delay=".15s">
+            <div class="mb-8 overflow-hidden rounded-[5px]">
+              <a href="blog-details.html" class="block">
+                <img src="assets/images/blog/blog-02.jpg" alt="image"
+                  class="w-full transition group-hover:rotate-6 group-hover:scale-125" />
+              </a>
+            </div>
+            <div>
+              <span
+                class="inline-block px-4 py-0.5 mb-6 text-xs font-medium leading-loose text-center text-white rounded-[5px] bg-primary">
+                Mar 15, 2023
+              </span>
+              <h3>
+                <a href="blog-details.html"
+                  class="inline-block mb-4 text-xl font-semibold text-dark dark:text-white hover:text-primary dark:hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl">
+                  How to earn more money as a wellness coach
+                </a>
+              </h3>
+              <p class="max-w-[370px] text-base text-body-color dark:text-dark-6">
+                Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+          <div class="mb-10 wow fadeInUp group" data-wow-delay=".2s">
+            <div class="mb-8 overflow-hidden rounded-[5px]">
+              <a href="blog-details.html" class="block">
+                <img src="assets/images/blog/blog-03.jpg" alt="image"
+                  class="w-full transition group-hover:rotate-6 group-hover:scale-125" />
+              </a>
+            </div>
+            <div>
+              <span
+                class="inline-block px-4 py-0.5 mb-6 text-xs font-medium leading-loose text-center text-white rounded-[5px] bg-primary">
+                Jan 05, 2023
+              </span>
+              <h3>
+                <a href="blog-details.html"
+                  class="inline-block mb-4 text-xl font-semibold text-dark dark:text-white hover:text-primary dark:hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl">
+                  The no-fuss guide to upselling and cross selling
+                </a>
+              </h3>
+              <p class="max-w-[370px] text-base text-body-color dark:text-dark-6">
+                Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center wow fadeInUp" data-wow-delay=".2s">
+        <div class="inline-flex p-3 bg-white dark:bg-dark-2 border rounded-[10px] border-stroke dark:border-dark-3">
+          <ul class="flex items-center -mx-1">
+            <li class="px-1">
+              <a href="javascript:void(0)"
+                class="flex items-center justify-center text-base bg-transparent border rounded-md hover:border-primary hover:bg-primary h-[34px] w-[34px] border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 hover:text-white dark:hover:border-primary dark:hover:text-white">
+                <span>
+                  <svg width="8" height="15" viewBox="0 0 8 15" class="fill-current stroke-current">
+                    <path
+                      d="M7.12979 1.91389L7.1299 1.914L7.1344 1.90875C7.31476 1.69833 7.31528 1.36878 7.1047 1.15819C7.01062 1.06412 6.86296 1.00488 6.73613 1.00488C6.57736 1.00488 6.4537 1.07206 6.34569 1.18007L6.34564 1.18001L6.34229 1.18358L0.830207 7.06752C0.830152 7.06757 0.830098 7.06763 0.830043 7.06769C0.402311 7.52078 0.406126 8.26524 0.827473 8.73615L0.827439 8.73618L0.829982 8.73889L6.34248 14.6014L6.34243 14.6014L6.34569 14.6047C6.546 14.805 6.88221 14.8491 7.1047 14.6266C7.30447 14.4268 7.34883 14.0918 7.12833 13.8693L1.62078 8.01209C1.55579 7.93114 1.56859 7.82519 1.61408 7.7797L1.61413 7.77975L1.61729 7.77639L7.12979 1.91389Z"
+                      stroke-width="0.3" />
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="px-1">
+              <a href="javascript:void(0)"
+                class="flex items-center justify-center text-base bg-transparent border rounded-md hover:border-primary hover:bg-primary h-[34px] w-[34px] border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 hover:text-white dark:hover:border-primary dark:hover:text-white">
+                1
+              </a>
+            </li>
+            <li class="px-1">
+              <a href="javascript:void(0)"
+                class="flex items-center justify-center text-base bg-transparent border rounded-md hover:border-primary hover:bg-primary h-[34px] w-[34px] border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 hover:text-white dark:hover:border-primary dark:hover:text-white">
+                2
+              </a>
+            </li>
+            <li class="px-1">
+              <a href="javascript:void(0)"
+                class="flex items-center justify-center text-base bg-transparent border rounded-md hover:border-primary hover:bg-primary h-[34px] w-[34px] border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 hover:text-white dark:hover:border-primary dark:hover:text-white">
+                3
+              </a>
+            </li>
+            <li class="px-1">
+              <a href="javascript:void(0)"
+                class="flex items-center justify-center text-base bg-transparent border rounded-md hover:border-primary hover:bg-primary h-[34px] w-[34px] border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 hover:text-white dark:hover:border-primary dark:hover:text-white">
+                4
+              </a>
+            </li>
+            <li class="px-1">
+              <a href="javascript:void(0)"
+                class="flex items-center justify-center text-base bg-transparent border rounded-md hover:border-primary hover:bg-primary h-[34px] w-[34px] border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 hover:text-white dark:hover:border-primary dark:hover:text-white">
+                <span>
+                  <svg width="8" height="15" viewBox="0 0 8 15" class="fill-current stroke-current">
+                    <path
+                      d="M0.870212 13.0861L0.870097 13.086L0.865602 13.0912C0.685237 13.3017 0.684716 13.6312 0.895299 13.8418C0.989374 13.9359 1.13704 13.9951 1.26387 13.9951C1.42264 13.9951 1.5463 13.9279 1.65431 13.8199L1.65436 13.82L1.65771 13.8164L7.16979 7.93248C7.16985 7.93243 7.1699 7.93237 7.16996 7.93231C7.59769 7.47923 7.59387 6.73477 7.17253 6.26385L7.17256 6.26382L7.17002 6.26111L1.65752 0.398611L1.65757 0.398563L1.65431 0.395299C1.454 0.194997 1.11779 0.150934 0.895299 0.373424C0.695526 0.573197 0.651169 0.908167 0.871667 1.13067L6.37922 6.98791C6.4442 7.06886 6.43141 7.17481 6.38592 7.2203L6.38587 7.22025L6.38271 7.22361L0.870212 13.0861Z"
+                      stroke-width="0.3" />
+                  </svg>
+                </span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
-  <!-- ====== Contact End ====== -->
+  <!-- ====== Blog Section End -->
 
   <!-- ====== Footer Section Start -->
   <footer class="wow fadeInUp relative z-10 bg-[#090E34] pt-20 lg:pt-[100px]" data-wow-delay=".15s">

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Details | Play Tailwind</title>
+    <title>Blog Details |</title>
     <link
       rel="shortcut icon"
       href="assets/images/favicon.png"
@@ -1892,7 +1892,7 @@
     <!-- ====== Back To Top End -->
 
     <!-- ====== Made With Button Start -->
-    <a
+    <!-- <a
       target="_blank"
       rel="nofollow noopener"
       class="fixed bottom-8 left-4 z-[999] inline-flex items-center gap-[10px] rounded-lg bg-white px-[14px] py-2 shadow-2 dark:bg-dark-2 sm:left-9"
@@ -1914,7 +1914,7 @@
           class="hidden dark:block"
         />
       </span>
-    </a>
+    </a> -->
     <!-- ====== Made With Button End -->
 
     <!-- ====== All Scripts -->

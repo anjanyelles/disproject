@@ -1,0 +1,11 @@
+{
+  "folders": [
+	{
+		"name": "disproject",
+		"path": "."
+	}
+],
+  "settings": {
+    "css.validate": false
+  }
+}

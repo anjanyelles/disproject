@@ -1,42 +1,21 @@
 {
-  "name": "astro-launch-ui",
-  "version": "1.0.0",
-  "description": "The ultimate starter template for your startup web project",
-  "main": "assets/js/astro-launch-ui.min.js",
+  "name": "play-tailwind",
+  "version": "2.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "create-free-demo": "node create-free-demo.js"
+    "build-css": "tailwindcss -i ./src/tailwind.css -o ./assets/css/tailwind.css -w"
   },
-  "keywords": [
-    "Astro",
-    "Startup",
-    "Corporate",
-    "Store Theme",
-    "Online Store",
-    "Startup template",
-    "Astro startup",
-    "Astro store"
-  ],
-  "author": "Creative Tim <hello@creative-tim.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uideck/play-tailwind.git"
+  },
+  "keywords": [],
+  "author": "",
   "license": "MIT",
-  "dependencies": {
-    "@astrojs/react": "^3.0.2",
-    "@astrojs/tailwind": "^5.0.0",
-    "@heroicons/react": "^2.0.16",
-    "@material-tailwind/react": "^2.1.10",
-    "astro": "^4.16.7",
-    "forward-ref": "^1.0.0",
-    "framer-motion": "^10.12.16",
-    "fs-extra": "^11.1.1",
-    "json-server": "^0.17.0"
-  },
   "devDependencies": {
-    "sass": "^1.55.0",
-    "tailwindcss": "^3.3.0",
-    "typescript": "^5.2.2"
+    "prettier": "^3.1.1",
+    "prettier-plugin-tailwindcss": "^0.5.9",
+    "tailwindcss": "^3.3.5"
   }
 }

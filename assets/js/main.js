@@ -20,7 +20,7 @@
           "assets/images/logo/disha3.png"
       } else {
         document.querySelector(".header-logo").src =
-          "assets/images/logo/DISHA1.png"
+          "assets/images/logo/disha3.png"
       }
     }
 

@@ -13,6 +13,30 @@
   <link rel="stylesheet" href="assets/css/animate.css" />
   <link rel="stylesheet" href="assets/css/tailwind.css" />
 
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <style>
+        /* Custom styles for the progress circles */
+        .progressnew {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .specializations-box {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+        .specializations-box:hover {
+            transform: scale(1.05);
+        }
+    </style>
   <!-- ==== WOW JS ==== -->
   <script src="assets/js/wow.min.js"></script>
   <script>
@@ -21,6 +45,8 @@
 </head>
 
 <body>
+
+  
   <!-- ====== Navbar Section Start -->
   <div class="absolute top-0 left-0 z-40 flex items-center w-full bg-transparent ud-header">
     <div class="container">
@@ -252,6 +278,7 @@
   <!-- ====== Navbar Section End -->
 
   <!-- ====== Hero Section Start -->
+  
   <div id="home" class="relative overflow-hidden bg-primary pt-[120px] md:pt-[130px] lg:pt-[160px]">
     <div class="container">
       <div class="flex flex-wrap items-center -mx-4">
@@ -262,8 +289,7 @@
               DISHHA HR Staffing
             </h1>
             <p class="mx-auto mb-9 max-w-[600px] text-base font-medium text-white sm:text-lg sm:leading-[1.44]">
-              DISHHA HR Staffing, a dedicated unit of the DISHHA group, excels in providing human resource consulting services. Originating in India, we have expanded our reach to South Asia and the UAE, with plans for further global growth. Our main office is located in Hyderabad, supported by a network of representatives.
-            </p>
+              DISHHA Consultants is India's leading executive search and talent advisory firm, proudly shaping the future of multinationals and Indian businesses for over 4 years
             
             <!-- <ul class="flex flex-wrap items-center justify-center gap-5 mb-10">
               <li>
@@ -281,7 +307,7 @@
         <div class="w-full px-4">
           <div class="wow fadeInUp relative z-10 mx-auto max-w-[845px]" data-wow-delay=".25s">
             <div class="mt-16">
-              <img src="assets/images/hero/hero-image.jpg" alt="hero"
+              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="hero"
                 class="max-w-full mx-auto rounded-t-xl rounded-tr-xl" />
             </div>
             <div class="absolute -left-9 bottom-0 z-[-1]">
@@ -457,85 +483,257 @@
       </div>
     </div>
   </div>
-  <!-- ====== Hero Section End -->
-
-  <!-- ====== Features Section Start -->
-  <section class="pb-8 pt-20 dark:bg-dark lg:pb-[70px] lg:pt-[120px]">
+    <section id="about" class="bg-gray-1 pb-8 pt-20 dark:bg-dark-2 lg:pb-[70px] lg:pt-[120px]">
     <div class="container">
-      <div class="flex flex-wrap -mx-4">
-        <div class="w-full px-4">
-          <div class="mx-auto mb-12 max-w-[485px] text-center lg:mb-[70px]">
-            <span class="block mb-2 text-lg font-semibold text-primary">
-              We Are
-            </span>
-            <h2 class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
-              Disha HR Services
-            </h2>
-            <!-- <p class="text-base text-body-color dark:text-dark-6">
-              At Disha HR Services, we’re dedicated to helping individuals and organizations navigate the changing world of work. With a focus on equity, skill specialization, and work-life balance, we aim to be your most trusted partner in achieving meaningful career growth and building exceptional teams.
+      <div class="wow fadeInUp" data-wow-delay=".2s">
+        <div class="flex flex-wrap items-center -mx-4">
+
+
+          <div class="w-full px-4 lg:w-1/2">
+            <div class="flex flex-wrap -mx-2 sm:-mx-4 lg:-mx-2 xl:-mx-4">
+              <div class="w-full px-2 sm:w-1/2 sm:px-4 lg:px-2 xl:px-4">
+                <div class="mb-4 sm:mb-8 sm:h-[400px] md:h-[540px] lg:h-[400px] xl:h-[500px]">
+                  <img src="./assets/images/about/uio.jpg" alt="about image"
+                    class="object-cover object-center w-full h-full" />
+                </div>
+              </div>
+
+              <div class="w-full px-2 sm:w-1/2 sm:px-4 lg:px-2 xl:px-4">
+                <div class="mb-4 sm:mb-8 sm:h-[220px] md:h-[346px] lg:mb-4 lg:h-[225px] xl:mb-8 xl:h-[310px]">
+                  <img src="./assets/images/about/po.jpg" alt="about image"
+                    class="object-cover object-center w-full h-full" />
+                </div>
+           
+                <div
+                  class="relative z-10 mb-4 flex items-center justify-center overflow-hidden bg-primary px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8">
+                  <div>
+                    <span class="block text-5xl font-extrabold text-white">
+                      09
+                    </span>
+                    <span class="block text-base font-semibold text-white">
+                      We have
+                    </span>
+                    <span class="block text-base font-medium text-white text-opacity-70">
+                      Years of experience
+                    </span>
+                  </div>
+                  <div>
+                    <span class="absolute top-0 left-0 -z-10">
+                      <svg width="106" height="144" viewBox="0 0 106 144" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect opacity="0.1" x="-67" y="47.127" width="113.378" height="131.304"
+                          transform="rotate(-42.8643 -67 47.127)" fill="url(#paint0_linear_1416_214)" />
+                        <defs>
+                          <linearGradient id="paint0_linear_1416_214" x1="-10.3111" y1="47.127" x2="-10.3111"
+                            y2="178.431" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="white" />
+                            <stop offset="1" stop-color="white" stop-opacity="0" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </span>
+                    <span class="absolute top-0 right-0 -z-10">
+                      <svg width="130" height="97" viewBox="0 0 130 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect opacity="0.1" x="0.86792" y="-6.67725" width="155.563" height="140.614"
+                          transform="rotate(-42.8643 0.86792 -6.67725)" fill="url(#paint0_linear_1416_215)" />
+                        <defs>
+                          <linearGradient id="paint0_linear_1416_215" x1="78.6495" y1="-6.67725" x2="78.6495"
+                            y2="133.937" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="white" />
+                            <stop offset="1" stop-color="white" stop-opacity="0" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </span>
+                    <span class="absolute bottom-0 right-0 -z-10">
+                      <svg width="175" height="104" viewBox="0 0 175 104" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect opacity="0.1" x="175.011" y="108.611" width="101.246" height="148.179"
+                          transform="rotate(137.136 175.011 108.611)" fill="url(#paint0_linear_1416_216)" />
+                        <defs>
+                          <linearGradient id="paint0_linear_1416_216" x1="225.634" y1="108.611" x2="225.634" y2="256.79"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="white" />
+                            <stop offset="1" stop-color="white" stop-opacity="0" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full px-4 lg:w-1/2">
+            <div class="mb-12 max-w-[540px] lg:mb-0">
+              <h2
+                class="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
+
+                Disha HR Services Sustainability Report
+              </h2>
+              <p class="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
+
+                DISHHA HR Services was incorporated in 2024 with the ambition to be a trusted partner in delivering comprehensive A to Z HR & FInance services.
+              </p>
+              <!-- <p class="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
+              Building on the legacy of DISHHA HR, a leader in HR services, we have expanded our offerings to provide top-tier staffing and recruitment solutions across various sectors. Our expertise ensures that clients receive tailored support at every stage of their business journey, allowing them to focus on their core objectives while we manage the essential details.
             </p> -->
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-wrap -mx-4" style="display: flex;flex-direction: row;justify-content: center;">
-        <!-- Feature Card 1 -->
-        <div class="w-full px-4 md:w-1/2 lg:w-1/4">
-          <div class="mb-12 wow fadeInUp group" data-wow-delay=".1s">
-            <div
-              class="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary"
-              style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
-              <span
-                class="absolute left-0 top-0 -z-[1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary bg-opacity-20 duration-300 group-hover:rotate-45"></span>
-              <!-- SVG Icon -->
-              <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M30.5801 8.30514H27.9926C28.6113 ..." fill="white" />
-              </svg>
+              <a href="javascript:void(0)"
+                class="inline-flex items-center justify-center py-3 text-base font-medium text-center text-white border rounded-md border-primary bg-primary px-7 hover:border-blue-dark hover:bg-blue-dark">
+                Know More
+              </a>
             </div>
-            <h4 class="mb-3 text-xl font-bold text-dark dark:text-white">Segment Specialization            </h4>
-            <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
-              To enhance our recruitment solutions, we conduct comprehensive analyses and ethnographic research to understand sector-specific dynamics
-            </p>
-          </div>
-        </div>
-        <!-- Feature Card 2 -->
-        <div class="w-full px-4 md:w-1/2 lg:w-1/4">
-          <div class="mb-12 wow fadeInUp group" data-wow-delay=".15s">
-            <div
-              class="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary">
-              <span
-                class="absolute left-0 top-0 -z-[1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary bg-opacity-20 duration-300 group-hover:rotate-45"></span>
-              <!-- SVG Icon -->
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M30.5998 1.01245H5.39981C2.98105 ..." fill="white" />
-              </svg>
-            </div>
-            <h4 class="mb-3 text-xl font-bold text-dark dark:text-white">Client-Centric Approach </h4>
-            <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
-              We prioritize our clients by incorporating agile, collaborative, and flexible methodologies, ensuring that their needs drive our processes.
-            </p>
-          </div>
-        </div>
-        <!-- Feature Card 3 -->
-        <div class="w-full px-4 md:w-1/2 lg:w-1/4">
-          <div class="mb-12 wow fadeInUp group" data-wow-delay=".2s">
-            <div
-              class="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary">
-              <span
-                class="absolute left-0 top-0 -z-[1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary bg-opacity-20 duration-300 group-hover:rotate-45"></span>
-              <!-- SVG Icon -->
-              <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M33.5613 21.4677L31.3675 ..." fill="white" />
-              </svg>
-            </div>
-            <h4 class="mb-3 text-xl font-bold text-dark dark:text-white">Candidate Assessment</h4>
-            <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
-              Utilizing renowned assessment tools and a team of certified experts and behavioral assessors, we evaluate candidates to ensure they are the right fit for our clients.
-            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <!-- ====== Hero Section End -->
+  <section id="about" class="bg-gray-1 pb-8 pt-20 dark:bg-dark-2 lg:pb-[70px] lg:pt-[120px]">
+    <div class="container">
+        <div class="wow fadeInUp" data-wow-delay=".2s">
+            <div class="flex flex-wrap items-center -mx-4">
+
+              
+
+                <!-- Text Container -->
+                <div class="w-full px-4 lg:w-6/12">
+                    <div class="mb-12 max-w-[540px] lg:mb-0">
+                        <h2 class="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
+                          Building careers. Building organisations.
+                        </h2>
+                        <p class="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
+                          Dishha Consultants is India's leading executive search and talent advisory firm, proudly shaping the future of multinationals and Indian businesses for over 5 years
+                        </p>
+                        <a href="javascript:void(0)" class="inline-flex items-center justify-center py-3 text-base font-medium text-center text-white border rounded-md border-primary bg-primary px-7 hover:border-blue-dark hover:bg-blue-dark">
+                            Know More
+                        </a>
+                    </div>
+                </div>
+
+
+                  <!-- Image Container -->
+                  <div class="w-full px-4 lg:w-6/12">
+                    <div class="flex flex-wrap -mx-2 sm:-mx-4 lg:-mx-2 xl:-mx-4">
+                        <div class="w-full px-2 sm:px-4">
+                            <div class="mb-4 sm:mb-8 sm:h-[400px] md:h-[540px] lg:h-[400px] xl:h-[500px]">
+                                <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="about image" class="object-cover object-center w-full h-full" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<br>
+<br>
+<section class="comm-sec py-12">
+  <div class="container mx-auto px-4">
+      <div class="sec-heading text-center mb-8">
+          <div class="main-head text-3xl font-bold mb-2">Industry Specialisations</div>
+          <p class="sub-line text-lg text-gray-600">
+              We recognize that each industry has its own nuances in terms of management style, hiring practices, and compensation norms.
+              To provide clients with specialized search solutions, Dishha has developed expertise in the following industries.
+          </p>
+      </div>
+      
+      <div class="specializations-sec">
+          <div class="swiper specializationsSwiper">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                      <a href="" class="specializations-box">
+                       
+                          <div class="specializations-icon">
+                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/06/sp-icon-02.svg" alt="" class="mb-2">
+                          </div>
+                          <p class="text-lg">Automobile &amp; Auto Components</p>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a href="https://www.abcconsultants.in/our-industries/financial-services/" class="specializations-box">
+                        
+                          <div class="specializations-icon">
+                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/10/Finance.svg" alt="" class="mb-2">
+                          </div>
+                          <p class="text-lg">Financial Services</p>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a href="" class="specializations-box">
+                        
+                          <div class="specializations-icon">
+                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/06/sp-icon-04.svg" alt="" class="mb-2">
+                          </div>
+                          <p class="text-lg">Industrial</p>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a href="" class="specializations-box">
+                        
+                          <div class="specializations-icon">
+                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/06/sp-icon-05.svg" alt="" class="mb-2">
+                          </div>
+                          <p class="text-lg">Technology</p>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a href="" class="specializations-box">
+                        
+                          <div class="specializations-icon">
+                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/10/Consumer.svg" alt="" class="mb-2">
+                          </div>
+                          <p class="text-lg">Consumer</p>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a href="" class="specializations-box">
+                        
+                          <div class="specializations-icon">
+                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/10/Media.svg" alt="" class="mb-2">
+                          </div>
+                          <p class="text-lg">Media &amp; Entertainment</p>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a href="" class="specializations-box">
+                       
+                          <div class="specializations-icon">
+                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/10/Healthcare.svg" alt="" class="mb-2">
+                          </div>
+                          <p class="text-lg">Pharma &amp; Healthcare</p>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a href="" class="specializations-box">
+                        
+                          <div class="specializations-icon">
+                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/10/Retail.svg" alt="" class="mb-2">
+                          </div>
+                          <p class="text-lg">Retail</p>
+                      </a>
+                  </div>
+              </div>
+              <div class="navigation flex justify-between mt-4">
+                  <div class="swiper-button-prev bg-gray-200 p-2 rounded-full">
+                      <img src="https://www.abcconsultants.in/wp-content/themes/abc/assets/img/next-pre.svg" alt="Previous">
+                  </div>
+                  <div class="swiper-button-next bg-gray-200 p-2 rounded-full">
+                      <img src="https://www.abcconsultants.in/wp-content/themes/abc/assets/img/next-pre.svg" alt="Next">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<br>
+<br>
+  <!-- ====== Features Section Start -->
+
 
   <!-- ====== Features Section End -->
 
@@ -644,112 +842,12 @@
   </section> -->
   <!-- ====== About Section End -->
 
-  <section id="about" class="bg-gray-1 pb-8 pt-20 dark:bg-dark-2 lg:pb-[70px] lg:pt-[120px]">
-    <div class="container">
-      <div class="wow fadeInUp" data-wow-delay=".2s">
-        <div class="flex flex-wrap items-center -mx-4">
 
 
-          <div class="w-full px-4 lg:w-1/2">
-            <div class="flex flex-wrap -mx-2 sm:-mx-4 lg:-mx-2 xl:-mx-4">
-              <div class="w-full px-2 sm:w-1/2 sm:px-4 lg:px-2 xl:px-4">
-                <div class="mb-4 sm:mb-8 sm:h-[400px] md:h-[540px] lg:h-[400px] xl:h-[500px]">
-                  <img src="./assets/images/about/uio.jpg" alt="about image"
-                    class="object-cover object-center w-full h-full" />
-                </div>
-              </div>
 
-              <div class="w-full px-2 sm:w-1/2 sm:px-4 lg:px-2 xl:px-4">
-                <div class="mb-4 sm:mb-8 sm:h-[220px] md:h-[346px] lg:mb-4 lg:h-[225px] xl:mb-8 xl:h-[310px]">
-                  <img src="./assets/images/about/po.jpg" alt="about image"
-                    class="object-cover object-center w-full h-full" />
-                </div>
-           
-                <div
-                  class="relative z-10 mb-4 flex items-center justify-center overflow-hidden bg-primary px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8">
-                  <div>
-                    <span class="block text-5xl font-extrabold text-white">
-                      09
-                    </span>
-                    <span class="block text-base font-semibold text-white">
-                      We have
-                    </span>
-                    <span class="block text-base font-medium text-white text-opacity-70">
-                      Years of experience
-                    </span>
-                  </div>
-                  <div>
-                    <span class="absolute top-0 left-0 -z-10">
-                      <svg width="106" height="144" viewBox="0 0 106 144" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <rect opacity="0.1" x="-67" y="47.127" width="113.378" height="131.304"
-                          transform="rotate(-42.8643 -67 47.127)" fill="url(#paint0_linear_1416_214)" />
-                        <defs>
-                          <linearGradient id="paint0_linear_1416_214" x1="-10.3111" y1="47.127" x2="-10.3111"
-                            y2="178.431" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="white" />
-                            <stop offset="1" stop-color="white" stop-opacity="0" />
-                          </linearGradient>
-                        </defs>
-                      </svg>
-                    </span>
-                    <span class="absolute top-0 right-0 -z-10">
-                      <svg width="130" height="97" viewBox="0 0 130 97" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect opacity="0.1" x="0.86792" y="-6.67725" width="155.563" height="140.614"
-                          transform="rotate(-42.8643 0.86792 -6.67725)" fill="url(#paint0_linear_1416_215)" />
-                        <defs>
-                          <linearGradient id="paint0_linear_1416_215" x1="78.6495" y1="-6.67725" x2="78.6495"
-                            y2="133.937" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="white" />
-                            <stop offset="1" stop-color="white" stop-opacity="0" />
-                          </linearGradient>
-                        </defs>
-                      </svg>
-                    </span>
-                    <span class="absolute bottom-0 right-0 -z-10">
-                      <svg width="175" height="104" viewBox="0 0 175 104" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <rect opacity="0.1" x="175.011" y="108.611" width="101.246" height="148.179"
-                          transform="rotate(137.136 175.011 108.611)" fill="url(#paint0_linear_1416_216)" />
-                        <defs>
-                          <linearGradient id="paint0_linear_1416_216" x1="225.634" y1="108.611" x2="225.634" y2="256.79"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stop-color="white" />
-                            <stop offset="1" stop-color="white" stop-opacity="0" />
-                          </linearGradient>
-                        </defs>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="w-full px-4 lg:w-1/2">
-            <div class="mb-12 max-w-[540px] lg:mb-0">
-              <h2
-                class="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
 
-                Disha HR Services Sustainability Report
-              </h2>
-              <p class="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
 
-                DISHHA HR Services was incorporated in 2024 with the ambition to be a trusted partner in delivering comprehensive A to Z HR & FInance services.
-              </p>
-              <!-- <p class="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
-              Building on the legacy of DISHHA HR, a leader in HR services, we have expanded our offerings to provide top-tier staffing and recruitment solutions across various sectors. Our expertise ensures that clients receive tailored support at every stage of their business journey, allowing them to focus on their core objectives while we manage the essential details.
-            </p> -->
-              <a href="javascript:void(0)"
-                class="inline-flex items-center justify-center py-3 text-base font-medium text-center text-white border rounded-md border-primary bg-primary px-7 hover:border-blue-dark hover:bg-blue-dark">
-                Know More
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
 
 
@@ -802,85 +900,7 @@
   </section>
   <!-- ====== CTA Section End -->
 
-  <!-- ====== Pricing Section Start -->
-  <section id="pricing"
-    class="relative z-20 overflow-hidden bg-white pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px]">
-    <div class="container mx-auto">
-      <div class="flex flex-wrap -mx-4">
-        <div class="w-full px-4">
-          <div class="mx-auto mb-[60px] max-w-[510px] text-center">
-            <span class="block mb-2 text-lg font-semibold text-primary">
-              What Makes Us Unique
-            </span>
 
-            <p class="text-base text-body-color dark:text-dark-6">
-              At DISHHA HR Staffing, our commitment to quality and adaptability positions us as a leader in the recruitment consulting space.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-wrap justify-center -mx-4">
-        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-          <div
-            class="relative z-10 px-8 py-10 mb-10 overflow-hidden bg-white rounded-xl shadow-pricing dark:bg-dark-2 sm:p-12 lg:px-6 lg:py-10 xl:p-14">
-            <span class="block mb-2 text-xl font-medium text-dark dark:text-white"  style="color: rgb(59 90 243);">
-              Automated Recruitment Processes :
-            </span>
-            <!-- <h2 class="mb-3 text-4xl font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]">
-              <span class="text-xl font-medium" style="color: rgb(59 90 243);">Study Plans:</span>
-              <span class="-ml-1 -tracking-[2px]">25.00</span>
-
-            </h2> -->
-            <!-- <h6 class="mb-5 font-medium medium text-m text-dark dark:text-white">
-              Features
-            </h6> -->
-            <p> Our use of algorithm-based searches and advanced technology streamlines candidate sourcing, assessments, and interviews.</p>
-
-
-          </div>
-        </div>
-        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-          <div
-            class="relative z-10 px-8 py-10 mb-10 overflow-hidden bg-white rounded-xl shadow-pricing dark:bg-dark-2 sm:p-12 lg:px-6 lg:py-10 xl:p-14">
-            <span class="block mb-2 text-xl font-medium text-dark dark:text-white" style="color: rgb(59 90 243);">
-              Process-Oriented Workflows :
-            </span>
-            <!-- <h2 class="mb-3 text-4xl font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]">
-              <span class="text-xl font-medium" style="color: rgb(59 90 243);">University Admissions:</span>
-              <span class="-ml-1 -tracking-[2px]">25.00</span>
-
-            </h2> -->
-            <!-- <h6 class="mb-5 font-medium medium text-m text-dark dark:text-white">
-                        Features
-                      </h6> -->
-            <p>We implement a Service Level Agreement (SLA) approach to ensure timely delivery throughout the recruitment lifecycle</p>
-
-
-          </div>
-        </div>
-        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-          <div
-            class="relative z-10 px-8 py-10 mb-10 overflow-hidden bg-white rounded-xl shadow-pricing dark:bg-dark-2 sm:p-12 lg:px-6 lg:py-10 xl:p-14">
-            <span class="block mb-2 text-xl font-medium text-dark dark:text-white" style="color: rgb(59 90 243);">
-              Customization :   
-            </span>
-            <!-- <h2 class="mb-3 text-4xl font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]">
-              <span class="text-xl font-medium" style="color: rgb(59 90 243);">DCareer Counseling:</span>
-              <span class="-ml-1 -tracking-[2px]">25.00</span>
-
-            </h2> -->
-            <!-- <h6 class="mb-5 font-medium medium text-m text-dark dark:text-white">
-                  Features
-                </h6> -->
-            <p>We offer bespoke solutions that allow for complete customization of our services and commercial terms to meet varying business requirements.</p>
-
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ====== Pricing Section End -->
 
   <!-- ====== Testimonial Section Start -->
   <section id="testimonials" class="overflow-hidden bg-gray-1 py-20 dark:bg-dark-2 md:py-[120px]">
@@ -2502,6 +2522,34 @@
       },
     });
   </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.specializationsSwiper', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3000, // Delay between transitions in milliseconds
+            disableOnInteraction: false, // Allows autoplay to continue after user interaction
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        },
+    });
+</script>
 </body>
 
 </html>

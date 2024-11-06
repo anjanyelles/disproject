@@ -46,6 +46,11 @@ border-bottom:   1px solid gray;
 --tw-text-opacity: 1;
 color: rgba(28, 26, 26, 1);
 }
+
+.lg\:text-white :hover{
+--tw-text-opacity: 1;
+color: rgba(28, 26, 26, 1);
+}
         .specializations-box:hover {
             transform: scale(1.05);
         }
@@ -84,7 +89,9 @@ color: rgba(28, 26, 26, 1);
   margin-left: 0.4em;
   transition: all 0.3s;
 }
-
+.colorcombo :hover{
+  color: black !important;
+}
 .button svg {
   width: 18px;
   height: 18px;
@@ -156,7 +163,7 @@ max-width: 1000px;
               <ul class="blcok lg:flex 2xl:ml-20">
                 <li class="relative submenu-item group">
                   <a href="javascript:void(0)"
-                    class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10">
+                    class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
                     find a job
 
                     <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none"
@@ -197,7 +204,7 @@ max-width: 1000px;
                 </li>
                 <li class="relative submenu-item group">
                   <a href="javascript:void(0)"
-                    class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10">
+                    class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
                     Account
 
                     <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none"
@@ -252,7 +259,7 @@ max-width: 1000px;
 
                 <li class="relative submenu-item group">
                   <a href="javascript:void(0)"
-                    class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10">
+                    class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
                     for investor
 
                     <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none"
@@ -297,7 +304,35 @@ max-width: 1000px;
                     </a>
                   </div>
                 </li>
+               
+                <li class="relative submenu-item group block lg:hidden">
+                  <a href="javascript:void(0)"
+                    class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
+                    
+                         Login
+                
+                    <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z" />
+                    </svg>
+                  </a>
+                  <div
+                    class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
+                    <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Organization
+                    </a>
+                    <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Employee
+                    </a>
+                  </div>
+                </li>
+                
+             
               </ul>
+           
             </nav>
           </div>
           <div class="flex items-center justify-end pr-16 lg:pr-0">
@@ -343,12 +378,24 @@ max-width: 1000px;
               </span>
             </label> -->
             <div class="hidden sm:flex">
-              <a href="signin.html" class="loginBtn px-[22px] py-2 text-base font-medium text-white hover:opacity-70">
-                Sign In
+              <a    href="employer.html">
+                <button class="button"   style="height: 3.1rem;">
+                  <div class="svg-wrapper-1">
+                    <div class="svg-wrapper">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <span>Employee </span>
+                </button>
               </a>
-              <a href="signup.html"
-                class="px-6 py-2 text-base font-medium text-white duration-300 ease-in-out bg-white rounded-md signUpBtn bg-opacity-20 hover:bg-opacity-100 hover:text-dark">
-                Sign Up
+              <a    href="employer.html"   style="margin-left: 1rem;">
+                <button class="button"   style="height: 3.1rem;">
+               
+                  <span>Organization </span>
+                </button>
               </a>
             </div>
           </div>
@@ -2254,11 +2301,14 @@ max-width: 1000px;
               <img src="assets/images/logo/DISHA1.png" alt="logo" class="max-w-full" />
             </a>
       
-            <p class="mb-8 max-w-[270px] text-base text-gray-7">
+            <p class="mb-2 max-w-[270px] text-base text-gray-7">
 
               Helping You Reach Your Dreams
               <!-- We create digital experiences for brands and companies by using
               technology. -->
+            </p>
+            <p class="mb-8 max-w-[270px] text-base text-gray-7">
+           contact: hr@dishha.com
             </p>
             <div class="flex items-center -mx-3">
               <a href="javascript:void(0)" class="px-3 text-gray-7 hover:text-white">

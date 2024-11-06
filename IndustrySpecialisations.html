@@ -28,6 +28,121 @@ href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     new WOW().init();
   </script>
 
+
+<style>
+  /* Custom styles for the progress circles */
+  .progressnew {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }.bg-primary {
+--tw-bg-opacity: 1;
+background: linear-gradient(#1b326e , #853edb);
+}
+  .specializations-box {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s;
+  }
+
+  .bg-transparent {
+/* background: linear-gradient(#1b326e , #853edb); */
+border-bottom:   1px solid gray;
+}
+
+.lg\:text-white {
+--tw-text-opacity: 1;
+color: rgba(28, 26, 26, 1);
+}
+
+.lg\:text-white :hover{
+--tw-text-opacity: 1;
+color: rgba(28, 26, 26, 1);
+}
+  .specializations-box:hover {
+      transform: scale(1.05);
+  }
+
+
+
+  /* From Uiverse.io by eirikvold */ 
+.button {
+
+font-family: inherit;
+font-size: 18px;
+background: linear-gradient(rgb(27, 50, 110), rgb(133, 62, 219));
+color: white;
+padding: 0.8em 1.2em;
+display: flex;
+align-items: center;
+justify-content: center;
+border: none;
+border-radius: 25px;
+box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+transition: all 0.3s;
+}
+
+.button:hover {
+transform: translateY(-3px);
+box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+transform: scale(0.95);
+box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button span {
+display: block;
+margin-left: 0.4em;
+transition: all 0.3s;
+}
+.colorcombo :hover{
+color: black !important;
+}
+.button svg {
+width: 18px;
+height: 18px;
+fill: white;
+transition: all 0.3s;
+}
+
+.button .svg-wrapper {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 30px;
+height: 30px;
+border-radius: 50%;
+background-color: rgba(255, 255, 255, 0.2);
+margin-right: 0.5em;
+transition: all 0.3s;
+}
+
+.button:hover .svg-wrapper {
+background-color: rgba(255, 255, 255, 0.5);
+}
+
+.button:hover svg {
+transform: rotate(45deg);
+}
+
+
+
+.lg\:w-1\/4 {
+width: 18%;
+}
+.max-w-\[845px\] {
+max-width: 1000px;
+}
+
+</style>
 <style>
     .slider-container {
         overflow: hidden; /* Hides any overflow content */
@@ -321,9 +436,18 @@ href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
                   We recognize that each industry has its own nuances in terms of management style, hiring practices and compensation norms. To provide clients with specialized search solutions, Dishha has developed expertise in the following industries
                 </p>
   
-                <a href="javascript:void(0)"
-                  class="inline-flex items-center justify-center py-3 text-base font-medium text-center text-white border rounded-md border-primary bg-primary px-7 hover:border-blue-dark hover:bg-blue-dark">
-                  Know More
+                <a    href="employer.html">
+                  <button class="button">
+                    <div class="svg-wrapper-1">
+                      <div class="svg-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                          <path fill="none" d="M0 0h24v24H0z"></path>
+                          <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <span>Get In Touch </span>
+                  </button>
                 </a>
               </div>
             </div>
@@ -466,7 +590,108 @@ href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     </div>
   </section>
 
-  
+  <br>
+<br>
+<section class="comm-sec py-12">
+  <div class="container mx-auto px-4">
+      <div class="sec-heading text-center mb-8">
+          <div class="main-head text-3xl font-bold mb-2">Industry Specialisations</div>
+          <p class="sub-line text-lg text-gray-600">
+              We recognize that each industry has its own nuances in terms of management style, hiring practices, and compensation norms.
+              To provide clients with specialized search solutions, Dishha has developed expertise in the following industries.
+          </p>
+      </div>
+      
+      <div class="specializations-sec">
+          <div class="swiper specializationsSwiper">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                      <a href="" class="specializations-box">
+                       
+                          <div class="specializations-icon">
+                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/06/sp-icon-02.svg" alt="" class="mb-2">
+                          </div>
+                          <p class="text-lg">Automobile &amp; Auto Components</p>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a href="https://www.abcconsultants.in/our-industries/financial-services/" class="specializations-box">
+                        
+                          <div class="specializations-icon">
+                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/10/Finance.svg" alt="" class="mb-2">
+                          </div>
+                          <p class="text-lg">Financial Services</p>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a href="" class="specializations-box">
+                        
+                          <div class="specializations-icon">
+                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/06/sp-icon-04.svg" alt="" class="mb-2">
+                          </div>
+                          <p class="text-lg">Industrial</p>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a href="" class="specializations-box">
+                        
+                          <div class="specializations-icon">
+                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/06/sp-icon-05.svg" alt="" class="mb-2">
+                          </div>
+                          <p class="text-lg">Technology</p>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a href="" class="specializations-box">
+                        
+                          <div class="specializations-icon">
+                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/10/Consumer.svg" alt="" class="mb-2">
+                          </div>
+                          <p class="text-lg">Consumer</p>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a href="" class="specializations-box">
+                        
+                          <div class="specializations-icon">
+                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/10/Media.svg" alt="" class="mb-2">
+                          </div>
+                          <p class="text-lg">Media &amp; Entertainment</p>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a href="" class="specializations-box">
+                       
+                          <div class="specializations-icon">
+                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/10/Healthcare.svg" alt="" class="mb-2">
+                          </div>
+                          <p class="text-lg">Pharma &amp; Healthcare</p>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a href="" class="specializations-box">
+                        
+                          <div class="specializations-icon">
+                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/10/Retail.svg" alt="" class="mb-2">
+                          </div>
+                          <p class="text-lg">Retail</p>
+                      </a>
+                  </div>
+              </div>
+              <div class="navigation flex justify-between mt-4">
+                  <div class="swiper-button-prev bg-gray-200 p-2 rounded-full">
+                      <img src="https://www.abcconsultants.in/wp-content/themes/abc/assets/img/next-pre.svg" alt="Previous">
+                  </div>
+                  <div class="swiper-button-next bg-gray-200 p-2 rounded-full">
+                      <img src="https://www.abcconsultants.in/wp-content/themes/abc/assets/img/next-pre.svg" alt="Next">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<br>
+<br>
 
   <section id="about" class="bg-gray-1 pb-8 pt-20 dark:bg-dark-2 lg:pb-[70px] lg:pt-[120px]">
     <div class="container">
@@ -505,6 +730,9 @@ href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
         </div>
     </div>
 </section>
+
+
+
   <section class="pb-8 pt-20 dark:bg-dark lg:pb-[70px] lg:pt-[120px]">
     <div class="container">
       <div class="flex flex-wrap -mx-4">

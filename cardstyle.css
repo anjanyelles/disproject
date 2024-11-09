@@ -1,0 +1,181 @@
+:root {
+    --primary: #ffffff;
+  
+    --text: #272727;
+  
+    --accent: #6a24bf;
+  
+    --accent-light: #eff3ff;
+  }
+  .hr-cardmain{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+.hr-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effects for cards */
+  .hr-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive behavior for the cards */
+  @media (max-width: 768px) {
+    .hr-card {
+      flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .hr-card {
+      flex: 1 1 calc(33.33% - 20px); /* 3 cards per row */
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .hr-card {
+      flex: 1 1 calc(25% - 20px); /* 4 cards per row */
+    }
+  }
+  
+
+
+  :root {
+    --primary: #ffffff;
+    --text: #272727;
+    --accent: #6a24bf;
+    --accent-light: #eff3ff;
+    --hover-bg: rgba(80, 87, 253, 0.1); /* Light hover effect for cards */
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    color: var(--text);
+    background: var(--primary);
+  }
+  
+  a {
+    text-decoration: none;
+    color: currentColor;
+  }
+  
+  .price__section {
+    margin-block: 3rem;
+  }
+  
+  .wrapper {
+    max-width: 1240px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  
+  .price__cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .price__card {
+    padding: 2rem 1.5rem;
+    box-shadow: 2px 0 24px #f7f7f7;
+    border-radius: 1rem;
+    display: inline-flex;
+    gap: 1rem;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .price__card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    background-color: var(--hover-bg);
+  }
+  
+  .price__details {
+    flex: 1 1 auto;
+  }
+  
+  .price__details h3 {
+    font-size: 32px;
+    line-height: 1.5;
+  }
+  
+  .price__details ul {
+    margin-block: 1rem;
+  }
+  
+  .price__details ul li::before {
+    content: ">";
+    margin-right: 8px;
+    font-weight: bold;
+  }
+  
+  hr.hrcard {
+    border: none;
+    height: 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .price__card .price {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -2px;
+  }
+  
+  .price__card .price:before {
+    content: "$";
+  }
+  
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .bg__accent {
+    background: var(--accent);
+    color: var(--primary);
+  }
+  
+  .bg__accent-2 {
+    background: var(--accent-light);
+    color: var(--accent);
+  }
+  
+  .bg__primary {
+    background: var(--primary);
+    color: var(--accent);
+  }
+  
+  .btn:hover {
+    transform: scale(0.96);
+    opacity: 0.8;
+  }
+  
+  /* Hover effect for buttons */
+  .bg__accent:hover,
+  .bg__accent-2:hover,
+  .bg__primary:hover {
+    background: var(--accent);
+    color: var(--primary);
+  }
+  

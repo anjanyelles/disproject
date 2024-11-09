@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Cards with Progressive Border Effect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+    <div class="flex gap-5">
+        <div class="relative w-64 bg-white rounded-lg shadow-md overflow-hidden text-center transition-transform duration-300 hover:shadow-lg transform hover:scale-105 group">
+            <img src="https://via.placeholder.com/250x150" alt="Online Classes" class="w-full h-40 object-cover">
+            <div class="absolute inset-0 w-0 h-0 border-2 border-red-500 transition-all duration-500 group-hover:w-full group-hover:h-full"></div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Online Classes</h3>
+                <p class="text-gray-600 text-sm mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut dolor sapien.</p>
+                <a href="#" class="inline-block mt-2 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors duration-300">Read More</a>
+            </div>
+        </div>
+        <!-- Repeat similar card structure for additional cards -->
+        <div class="relative w-64 bg-white rounded-lg shadow-md overflow-hidden text-center transition-transform duration-300 hover:shadow-lg transform hover:scale-105 group">
+            <img src="https://via.placeholder.com/250x150" alt="Scholarship" class="w-full h-40 object-cover">
+            <div class="absolute inset-0 w-0 h-0 border-2 border-red-500 transition-all duration-500 group-hover:w-full group-hover:h-full"></div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Scholarship</h3>
+                <p class="text-gray-600 text-sm mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut dolor sapien.</p>
+                <a href="#" class="inline-block mt-2 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors duration-300">Read More</a>
+            </div>
+        </div>
+        <div class="relative w-64 bg-white rounded-lg shadow-md overflow-hidden text-center transition-transform duration-300 hover:shadow-lg transform hover:scale-105 group">
+            <img src="https://via.placeholder.com/250x150" alt="Books & Library" class="w-full h-40 object-cover">
+            <div class="absolute inset-0 w-0 h-0 border-2 border-red-500 transition-all duration-500 group-hover:w-full group-hover:h-full"></div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Books & Library</h3>
+                <p class="text-gray-600 text-sm mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut dolor sapien.</p>
+                <a href="#" class="inline-block mt-2 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors duration-300">Read More</a>
+            </div>
+        </div>
+        <div class="relative w-64 bg-white rounded-lg shadow-md overflow-hidden text-center transition-transform duration-300 hover:shadow-lg transform hover:scale-105 group">
+            <img src="https://via.placeholder.com/250x150" alt="Trending Courses" class="w-full h-40 object-cover">
+            <div class="absolute inset-0 w-0 h-0 border-2 border-red-500 transition-all duration-500 group-hover:w-full group-hover:h-full"></div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Trending Courses</h3>
+                <p class="text-gray-600 text-sm mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut dolor sapien.</p>
+                <a href="#" class="inline-block mt-2 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors duration-300">Read More</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

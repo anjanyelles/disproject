@@ -1877,120 +1877,238 @@ background: white;
                 <img src="assets/images/logo/logo-white.svg" alt="logo" class="hidden dark:block" />
               </a> -->
             </div>
-            <form>
+            <!-- <form method="post"   name="sheetform" action="https://script.google.com/macros/s/AKfycbxdK-599xtiOcAig3yVna2kULMc1uNvheHWzljmRxS_L8SxDT-7W6bitc7TifhrmBqV/exec">
               <div class="mb-[22px]">
-                <input type="text" placeholder="First Name"
-                  class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
-              </div>
-              
-              <div class="mb-[22px]">
-                <input type="text" placeholder="Last Name"
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" 
                   class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
               </div>
             
               <div class="mb-[22px]">
-                <input type="email" placeholder="Email"
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" 
                   class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
               </div>
             
               <div class="mb-[22px]">
-                <input type="text" placeholder="Mobile Number"
+                <input type="email" id="email" name="email" placeholder="Email" 
                   class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
               </div>
             
               <div class="mb-[22px]">
-                <input type="text" placeholder="Country"
+                <input type="text" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number" 
                   class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
               </div>
             
               <div class="mb-[22px]">
-                <input type="text" placeholder="State"
+                <input type="text" id="country" name="country" placeholder="Country" 
                   class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
               </div>
             
               <div class="mb-[22px]">
-                <input type="text" placeholder="City"
+                <input type="text" id="state" name="state" placeholder="State" 
                   class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
               </div>
             
               <div class="mb-[22px]">
-                <input type="text" placeholder="Primary Skill"
+                <input type="text" id="city" name="city" placeholder="City" 
                   class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
               </div>
             
               <div class="mb-[22px]">
-                <input type="text" placeholder="Current Employer"
+                <input type="text" id="primarySkill" name="primarySkill" placeholder="Primary Skill" 
                   class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
               </div>
             
               <div class="mb-[22px]">
-                <input type="text" placeholder="Current Technology"
+                <input type="text" id="currentEmployer" name="currentEmployer" placeholder="Current Employer" 
                   class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
               </div>
             
               <div class="mb-[22px]">
-                <input type="text" placeholder="Experience (Years)"
+                <input type="text" id="currentTechnology" name="currentTechnology" placeholder="Current Technology" 
                   class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
               </div>
             
               <div class="mb-[22px]">
-                <input type="text" placeholder="Referred By"
+                <input type="text" id="experience" name="experience" placeholder="Experience (Years)" 
                   class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
               </div>
             
               <div class="mb-[22px]">
-                <input type="text" placeholder="Expected Pay"
+                <input type="text" id="referredBy" name="referredBy" placeholder="Referred By" 
+                  class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
+              </div>
+            
+              <div class="mb-[22px]">
+                <input type="text" id="expectedPay" name="expectedPay" placeholder="Expected Pay" 
                   class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
               </div>
             
               <div class="mb-[22px]">
                 <label for="relocation">Open to Relocation:</label>
-                <select id="relocation" class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6">
+                <select id="relocation" name="relocation" class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6">
                   <option value="yes">Yes</option>
                   <option value="no">No</option>
                 </select>
               </div>
             
               <div class="mb-[22px]">
-                <input type="text" placeholder="Passport Available"
+                <input type="checkbox" id="passportAvailable" name="passportAvailable" value="yes" />
+                <label for="passportAvailable">Passport Available</label>
+              </div>
+            
+              <div class="mb-[22px]">
+                <input type="text" id="relevantExperience" name="relevantExperience" placeholder="Relevant Experience" 
                   class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
               </div>
             
               <div class="mb-[22px]">
-                <input type="text" placeholder="Relevant Experience"
+                <input type="text" id="preferredLocation" name="preferredLocation" placeholder="Preferred Location" 
                   class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
               </div>
             
               <div class="mb-[22px]">
-                <input type="text" placeholder="Preferred Location"
-                  class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
-              </div>
-            
-              <div class="mb-[22px]">
-                <label for="contact">Open to Contact:</label>
-                <div class="flex">
-                  <div class="mr-4">
-                    <input type="radio" id="contact-yes" name="contact" value="yes">
-                    <label for="contact-yes">Yes</label>
-                  </div>
-                  <div>
-                    <input type="radio" id="contact-no" name="contact" value="no">
-                    <label for="contact-no">No</label>
-                  </div>
-                </div>
-              </div>
-            
-              <div class="mb-[22px]">
-                <label for="resume">Upload Resume:</label>
-                <input type="file" id="resume" name="resume"
+                <input type="text" id="contact" name="contact" placeholder="Contact" 
                   class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
               </div>
             
               <div class="mb-9">
-                <input type="submit" value="Submit"
+                <input type="submit" value="Submit" 
                   class="w-full px-5 py-3 text-base text-white transition duration-300 ease-in-out border rounded-md cursor-pointer border-primary bg-primary hover:bg-blue-dark" />
               </div>
-            </form>
+            </form> -->
+            
+            
+            
+
+            <form method="post" enctype="multipart/form-data" name="sheetform" 
+            action="https://script.google.com/macros/s/AKfycbxdK-599xtiOcAig3yVna2kULMc1uNvheHWzljmRxS_L8SxDT-7W6bitc7TifhrmBqV/exec">
+              
+            <!-- First Name -->
+            <div class="mb-[22px]">
+              <input type="text" id="firstName" name="firstName" placeholder="First Name" 
+                class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
+            </div>
+          
+            <!-- Last Name -->
+            <div class="mb-[22px]">
+              <input type="text" id="lastName" name="lastName" placeholder="Last Name" 
+                class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
+            </div>
+          
+            <!-- Email -->
+            <div class="mb-[22px]">
+              <input type="email" id="email" name="email" placeholder="Email" 
+                class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
+            </div>
+          
+            <!-- Mobile Number -->
+            <div class="mb-[22px]">
+              <input type="text" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number" 
+                class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
+            </div>
+          
+            <!-- Country -->
+            <div class="mb-[22px]">
+              <input type="text" id="country" name="country" placeholder="Country" 
+                class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
+            </div>
+          
+            <!-- State -->
+            <div class="mb-[22px]">
+              <input type="text" id="state" name="state" placeholder="State" 
+                class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
+            </div>
+          
+            <!-- City -->
+            <div class="mb-[22px]">
+              <input type="text" id="city" name="city" placeholder="City" 
+                class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
+            </div>
+          
+            <!-- Primary Skill -->
+            <div class="mb-[22px]">
+              <input type="text" id="primarySkill" name="primarySkill" placeholder="Primary Skill" 
+                class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
+            </div>
+          
+            <!-- Current Employer -->
+            <div class="mb-[22px]">
+              <input type="text" id="currentEmployer" name="currentEmployer" placeholder="Current Employer" 
+                class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
+            </div>
+          
+            <!-- Current Technology -->
+            <div class="mb-[22px]">
+              <input type="text" id="currentTechnology" name="currentTechnology" placeholder="Current Technology" 
+                class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
+            </div>
+          
+            <!-- Experience -->
+            <div class="mb-[22px]">
+              <input type="text" id="experience" name="experience" placeholder="Experience (Years)" 
+                class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
+            </div>
+          
+            <!-- Referred By -->
+            <div class="mb-[22px]">
+              <input type="text" id="referredBy" name="referredBy" placeholder="Referred By" 
+                class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
+            </div>
+          
+            <!-- Expected Pay -->
+            <div class="mb-[22px]">
+              <input type="text" id="expectedPay" name="expectedPay" placeholder="Expected Pay" 
+                class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
+            </div>
+          
+            <!-- Relocation -->
+            <div class="mb-[22px]">
+              <label for="relocation">Open to Relocation:</label>
+              <select id="relocation" name="relocation" class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+          
+            <!-- Passport Available -->
+            <div class="mb-[22px]">
+              <input type="checkbox" id="passportAvailable" name="passportAvailable" value="yes" />
+              <label for="passportAvailable">Passport Available</label>
+            </div>
+          
+            <!-- Relevant Experience -->
+            <div class="mb-[22px]">
+              <input type="text" id="relevantExperience" name="relevantExperience" placeholder="Relevant Experience" 
+                class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
+            </div>
+          
+            <!-- Preferred Location -->
+            <div class="mb-[22px]">
+              <input type="text" id="preferredLocation" name="preferredLocation" placeholder="Preferred Location" 
+                class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
+            </div>
+          
+            <!-- Contact -->
+            <div class="mb-[22px]">
+              <input type="text" id="contact" name="contact" placeholder="Contact" 
+                class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 placeholder:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
+            </div>
+          
+            <!-- Upload Resume -->
+            <div class="mb-[22px]">
+              <label for="fileUpload">Upload Resume:</label>
+              <input type="file" id="fileUpload" name="fileUpload" 
+                class="w-full px-5 py-3 text-base transition bg-transparent border rounded-md outline-none border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 focus:border-primary dark:focus:border-primary focus-visible:shadow-none" />
+            </div>
+          
+            <!-- Submit Button -->
+            <div class="mb-9">
+              <input type="submit" value="Submit" 
+                class="w-full px-5 py-3 text-base text-white transition duration-300 ease-in-out border rounded-md cursor-pointer border-primary bg-primary hover:bg-blue-dark" />
+            </div>
+          </form>
+          
+            
             
             <span class="relative block text-center z-1 mb-7">
               <span class="absolute left-0 block w-full h-px -z-1 top-1/2 bg-stroke dark:bg-dark-3"></span>
@@ -2633,6 +2751,61 @@ background: white;
 
   gtag('config', 'G-KNMFM44J4E');
 </script>
+
+
+<!-- <script>
+  document.getElementById('jobForm').addEventListener('submit', async function (e) {
+    e.preventDefault(); // Prevent the default form submission behavior
+
+    // Collect form data
+    const formData = {
+      firstName: document.getElementById('firstName').value,
+      lastName: document.getElementById('lastName').value,
+      email: document.getElementById('email').value,
+      mobileNumber: document.getElementById('mobileNumber').value,
+      country: document.getElementById('country').value,
+      state: document.getElementById('state').value,
+      city: document.getElementById('city').value,
+      primarySkill: document.getElementById('primarySkill').value,
+      currentEmployer: document.getElementById('currentEmployer').value,
+      currentTech: document.getElementById('currentTechnology').value,
+      experience: parseInt(document.getElementById('experience').value) || 0,
+      referredBy: document.getElementById('referredBy').value,
+      expectedPay: parseFloat(document.getElementById('expectedPay').value) || 0,
+      relocation: document.getElementById('relocation').value,
+      passportAvailable: document.getElementById('passportAvailable').value,
+      relevantExperience: document.getElementById('relevantExperience').value,
+      preferredLocation: document.getElementById('preferredLocation').value,
+    };
+
+    try {
+      // Make the POST request to the API
+      const response = await fetch('http://182.18.139.138:9000/api/auth-service/user/addProfestionalDetails', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      // Check if the request was successful
+      if (response.ok) {
+        const result = await response.json();
+        alert('Details added successfully!');
+        console.log(result);
+      } else {
+        alert('Failed to submit details. Please try again.');
+        console.error('Error:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('An error occurred. Please check your connection and try again.');
+    }
+  });
+</script> -->
+
+
+<script src="scriptdata.js"></script>
   <script>
     // ==== for menu scroll
     const pageLink = document.querySelectorAll(".ud-menu-scroll");

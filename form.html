@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+</head>
+<body>
+    <form id="jobForm">
+        <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="text" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number" required>
+        <input type="text" id="country" name="country" placeholder="Country" required>
+        <input type="text" id="state" name="state" placeholder="State" required>
+        <input type="text" id="city" name="city" placeholder="City" required>
+        <input type="text" id="primarySkill" name="primarySkill" placeholder="Primary Skill" required>
+        <input type="text" id="currentEmployer" name="currentEmployer" placeholder="Current Employer" required>
+        <input type="text" id="currentTechnology" name="currentTechnology" placeholder="Current Technology" required>
+        <input type="number" id="experience" name="experience" placeholder="Experience" required>
+        <input type="text" id="referredBy" name="referredBy" placeholder="Referred By">
+        <input type="text" id="expectedPay" name="expectedPay" placeholder="Expected Pay" required>
+        <select id="relocation" name="relocation">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <input type="file" id="resume" name="resume">
+        <label>
+            <input type="radio" name="contact" value="email" required> Email
+        </label>
+        <label>
+            <input type="radio" name="contact" value="phone"> Phone
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("jobForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent form from submitting the traditional way
+
+            // Collect form data
+            const formData = {
+                firstName: document.getElementById("firstName").value,
+                lastName: document.getElementById("lastName").value,
+                email: document.getElementById("email").value,
+                mobileNumber: document.getElementById("mobileNumber").value,
+                country: document.getElementById("country").value,
+                state: document.getElementById("state").value,
+                city: document.getElementById("city").value,
+                primarySkill: document.getElementById("primarySkill").value,
+                currentEmployer: document.getElementById("currentEmployer").value,
+                currentTechnology: document.getElementById("currentTechnology").value,
+                experience: document.getElementById("experience").value,
+                referredBy: document.getElementById("referredBy").value,
+                expectedPay: document.getElementById("expectedPay").value,
+                relocation: document.getElementById("relocation").value,
+                passportAvailable: document.getElementById("passportAvailable") ? document.getElementById("passportAvailable").value : '',
+                relevantExperience: document.getElementById("relevantExperience") ? document.getElementById("relevantExperience").value : '',
+                preferredLocation: document.getElementById("preferredLocation") ? document.getElementById("preferredLocation").value : '',
+                contact: document.querySelector('input[name="contact"]:checked') ? document.querySelector('input[name="contact"]:checked').value : '',
+                resume: document.getElementById("resume").files[0] ? document.getElementById("resume").files[0].name : null
+            };
+
+            // Log form data to check what is being collected
+            console.log('Collected form data:', formData);
+
+            // Convert form data to JSON
+            const jsonData = JSON.stringify(formData);
+
+            // Send form data to server via Fetch API
+            fetch('http://localhost:3000/submit-form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: jsonData // Send raw JSON data
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Form submission successful:', data);
+            })
+            .catch(error => {
+                console.error('Error submitting form:', error);
+            });
+        });
+    </script>
+</body>
+</html>

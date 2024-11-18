@@ -1,0 +1,126 @@
+/* General body style */
+/* body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f8f9fc, #e3e9f7);
+    color: #333;
+} */
+
+/* Center the container and add padding */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    padding: 2em 3em;
+}
+
+/* Card container */
+.contact-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 700px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    padding: 2em;
+    gap: 2em;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact Details */
+.contact-details {
+    flex: 1;
+    min-width: 300px;
+    color: #4a4a4a;
+}
+
+.contact-details h1 {
+    font-size: 1.8rem;
+    color: #939393;
+    margin-bottom: 1rem;
+}
+
+.contact-details p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0.5em 0;
+}
+
+.contact-details strong {
+    color: #5b5c5e;
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form h2 {
+    font-size: 1.5rem;
+    color: #737476;
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    color: #555;
+}
+
+.contact-form input, 
+.contact-form select {
+    width: 100%;
+    padding: 0.75em;
+    margin-top: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+.contact-form button {
+    display: inline-block;
+    width: 8rem;
+    padding: 0.8em;
+    margin-top: 1.5rem;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(rgb(27, 50, 110), rgb(133, 62, 219));;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-card {
+        flex-direction: column;
+        padding: 1.5em;
+        gap: 1.5em;
+    }
+}

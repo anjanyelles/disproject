@@ -12,6 +12,127 @@
 
   <!-- ==== WOW JS ==== -->
   <script src="assets/js/wow.min.js"></script>
+
+  <style>
+    /* Custom styles for the progress circles */
+    .progressnew {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }.bg-primary {
+--tw-bg-opacity: 1;
+background: linear-gradient(#1b326e , #853edb);
+}
+    .specializations-box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        transition: transform 0.3s;
+    }
+
+    .datajobtitle{
+      color: #853edb !important;
+    }
+
+    .bg-transparent {
+/* background: linear-gradient(#1b326e , #853edb); */
+border-bottom:   1px solid gray;
+}
+
+.lg\:text-white {
+--tw-text-opacity: 1;
+color: rgba(28, 26, 26, 1);
+}
+
+.lg\:text-white :hover{
+--tw-text-opacity: 1;
+color: rgba(28, 26, 26, 1);
+}
+    .specializations-box:hover {
+        transform: scale(1.05);
+    }
+
+
+
+    /* From Uiverse.io by eirikvold */ 
+.button {
+
+font-family: inherit;
+font-size: 18px;
+background: linear-gradient(rgb(27, 50, 110), rgb(133, 62, 219));
+color: white;
+padding: 0.8em 1.2em;
+display: flex;
+align-items: center;
+justify-content: center;
+border: none;
+border-radius: 25px;
+box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+transition: all 0.3s;
+}
+
+.button:hover {
+transform: translateY(-3px);
+box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+transform: scale(0.95);
+box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button span {
+display: block;
+margin-left: 0.4em;
+transition: all 0.3s;
+}
+.colorcombo :hover{
+color: black !important;
+}
+.button svg {
+width: 18px;
+height: 18px;
+fill: white;
+transition: all 0.3s;
+}
+
+.button .svg-wrapper {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 30px;
+height: 30px;
+border-radius: 50%;
+background-color: rgba(255, 255, 255, 0.2);
+margin-right: 0.5em;
+transition: all 0.3s;
+}
+
+.button:hover .svg-wrapper {
+background-color: rgba(255, 255, 255, 0.5);
+}
+
+.button:hover svg {
+transform: rotate(45deg);
+}
+
+
+
+
+.group:hover .lg\:group-hover\:text-white {
+--tw-text-opacity: 1;
+color: black ;
+}
+.max-w-\[845px\] {
+max-width: 1000px;
+}
+
+</style>
   <script>
     new WOW().init();
   </script>
@@ -23,15 +144,15 @@
     <div class="container">
       <div class="relative flex items-center justify-between -mx-4">
         <div class="max-w-full px-4 w-60">
-          <!-- <a href="index.html" class="block w-full py-5 navbar-logo">
-            <img src="assets/images/logo/logo-white.svg" alt="logo" class="w-full header-logo" />
-          </a> -->
-          <a href="javascript:void(0)"
-            class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10">
-            dishha
-
-
+          <a href="index.html" class="block w-full py-5 navbar-logo">
+            <img src="assets/images/logo/disha3.png" alt="logo" class="w-full header-logo" />
           </a>
+          <!-- <a href="javascript:void(0)"
+              class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10">
+      
+            
+           
+            </a> -->
         </div>
         <div class="flex items-center justify-between w-full px-4">
           <div>
@@ -42,202 +163,210 @@
               <span class="relative my-[6px] block h-[2px] w-[30px] bg-white"></span>
             </button>
             <nav id="navbarCollapse"
-            class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6">
-            <ul class="blcok lg:flex 2xl:ml-20">
-              <li class="relative submenu-item group">
-                <a href="index.html"
-                  class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
-                  HOME
+              class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6">
+              <ul class="blcok lg:flex 2xl:ml-20">
+             
+                <li class="relative submenu-item group">
+                  <a href="about.html"
+                    class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
+                    ABOUT Us
 
-                  <!-- <svg class="ml-2 fill-current   datajobtitle" width="16" height="20" viewBox="0 0 16 20" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z" />
-                  </svg> -->
-                </a>
-                <!-- <div
-                  class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
-              
+                    <!-- <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z" />
+                    </svg> -->
+                  </a>
+                  <!-- <div
+                    class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
+                    <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      operational career
+                    </a>
+                    <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      logistics
+                    </a>
+                    <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      industrial & skilled trades
+                    </a>
+                    <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      industrial & skilled trades
+                    </a>
+                    <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      call & contact centers
+                    </a>
+                    <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      hospitality & events
+                    </a>
+                    <a href="signin.html"
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      retail
+                    </a>
+                    <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      professional career
+                    </a>
+                  </div> -->
+                </li>
+
+                <!-- <li class="">
+                  <a href="about.html"
+                    class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10">
+                
+                  </a>
+                </li> -->
+                <li class="relative submenu-item group">
                   <a href="hrservice.html"
-                  class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                  ABOUTs
-                </a>
-                <a href="IndustrySpecialisations.html"
-                class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                OUR SERVICES 
-              </a>
-                  <a href=""
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                    class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
+                    OUR SERVICES 
+
+                    <!-- <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z" />
+                    </svg> -->
+                  </a>
+                <li class="relative submenu-item group">
+                  <a href="javascript:void(0)"
+                    class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
                     CAREERS
+
+                    <!-- <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z" />
+                    </svg> -->
                   </a>
-                  <a href=""
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                  <!-- <div
+                    class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full"> -->
+                    <!-- <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      About Page
+                    </a>
+                    <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Pricing Page
+                    </a>
+                    <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Contact Page
+                    </a>
+                    <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Blog Grid Page
+                    </a>
+                    <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Blog Details Page
+                    </a> -->
+                    <!-- <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Sign Up Page
+                    </a> -->
+                    <!-- <a href="signin.html"
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Sign In Page
+                    </a> -->
+                    <!-- <a href=".html"
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      404 Page
+                    </a> -->
+                  <!-- </div> -->
+                </li>
+
+
+                <li class="relative submenu-item group">
+                  <a href="Getintouch.html"
+                    class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
                     CONTACT
+          
                   </a>
-                  <a href=""
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    jobs in USA
-                  </a>
-                  <a href=""
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    view all
-                  </a>
-                  <a href=""
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    careers at dishha
-                  </a>
+                </li>
+                <li class="relative submenu-item group">
+                  <a href="javascript:void(0)"
+                    class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
+                    JOBS
 
-                </div> -->
-              </li>
-              <li class="relative submenu-item group">
-                <a href="about.html"
-                  class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
-                  ABOUT Us
-
-                  <!-- <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z" />
-                  </svg> -->
-                </a>
-                <!-- <div
-                  class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
-                  <a href=""
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    operational career
+                    <!-- <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z" />
+                    </svg> -->
                   </a>
-                  <a href=""
+                  <div
+                    class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
+                    <!-- <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      About Page
+                    </a>
+                    <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Pricing Page
+                    </a>
+                    <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Contact Page
+                    </a>
+                    <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Blog Grid Page
+                    </a>
+                    <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Blog Details Page
+                    </a> -->
+                    <!-- <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Sign Up Page
+                    </a> -->
+                    <a href="signin.html"
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Browse Jobs
+                    </a>
+                    <a href="SubmityourcV.html"
                     class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    logistics
+                    Submit Your CV
                   </a>
-                  <a href=""
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    industrial & skilled trades
+                    <!-- <a href=".html"
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      404 Page
+                    </a> -->
+                  </div>
+                </li>
+                <li class="relative submenu-item group block lg:hidden">
+                  <a href="javascript:void(0)"
+                    class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
+                    
+                         Login
+                
+                    <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z" />
+                    </svg>
                   </a>
-                  <a href=""
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    industrial & skilled trades
-                  </a>
-                  <a href=""
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    call & contact centers
-                  </a>
-                  <a href=""
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    hospitality & events
-                  </a>
-                  <a href="signin.html"
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    retail
-                  </a>
-                  <a href=""
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    professional career
-                  </a>
-                </div> -->
-              </li>
-
-              <!-- <li class="">
-                <a href="about.html"
-                  class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10">
-              
-                </a>
-              </li> -->
-              <li class="relative submenu-item group">
-                <a href="hrservice.html"
-                  class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
-                  OUR SERVICES 
-
-                  <!-- <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z" />
-                  </svg> -->
-                </a>
-              <li class="relative submenu-item group">
-                <a href="javascript:void(0)"
-                  class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
-                  CAREERS
-
-                  <!-- <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z" />
-                  </svg> -->
-                </a>
-                <div
-                  class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
-                  <!-- <a href=""
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    About Page
-                  </a>
-                  <a href=""
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    Pricing Page
-                  </a>
-                  <a href=""
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    Contact Page
-                  </a>
-                  <a href=""
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    Blog Grid Page
-                  </a>
-                  <a href=""
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    Blog Details Page
-                  </a> -->
-                  <!-- <a href=""
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    Sign Up Page
-                  </a> -->
-                  <a href="signin.html"
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    Sign In Page
-                  </a>
-                  <!-- <a href=".html"
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    404 Page
-                  </a> -->
-                </div>
-              </li>
-
-              <li class="relative submenu-item group">
-                <a href="#contact"
-                  class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
-                  CONTACT
-        
-                </a>
-              </li>
-              <li class="relative submenu-item group block lg:hidden">
-                <a href="javascript:void(0)"
-                  class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
-                  
-                       Login
-              
-                  <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z" />
-                  </svg>
-                </a>
-                <div
-                  class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
-                  <a href=""
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    Organization
-                  </a>
-                  <a href=""
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    Employee
-                  </a>
-                </div>
-              </li>
-              
+                  <div
+                    class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
+                    <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Organization
+                    </a>
+                    <a href=""
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Employee
+                    </a>
+                  </div>
+                </li>
+                
+             
+              </ul>
            
-            </ul>
-         
-          </nav>
+            </nav>
           </div>
           <div class="flex items-center justify-end pr-16 lg:pr-0">
             <!-- <label for="themeSwitcher" class="inline-flex items-center cursor-pointer" aria-label="themeSwitcher"
@@ -282,13 +411,25 @@
               </span>
             </label> -->
             <div class="hidden sm:flex">
-              <a href="signin.html" class="loginBtn px-[22px] py-2 text-base font-medium text-white hover:opacity-70">
-                Sign In
+              <a    href="employer.html">
+                <button class="button"   style="height: 3.1rem;">
+                  <div class="svg-wrapper-1">
+                    <div class="svg-wrapper">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <span>Employee </span>
+                </button>
               </a>
-              <a href="signup.html"
-                class="px-6 py-2 text-base font-medium text-white duration-300 ease-in-out bg-white rounded-md signUpBtn bg-opacity-20 hover:bg-opacity-100 hover:text-dark">
-                Sign Up
-              </a>
+              <!-- <a    href="employer.html"   style="margin-left: 1rem;">
+                <button class="button"   style="height: 3.1rem;">
+               
+                  <span>Organization </span>
+                </button>
+              </a> -->
             </div>
           </div>
         </div>

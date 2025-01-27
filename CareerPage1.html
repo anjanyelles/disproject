@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Page - Disha HR Service</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(rgb(27, 50, 110), rgb(133, 62, 219));
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+    header a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    .filter {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+    }
+    .filter select, .filter input {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .job-listing {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .job-listing h3 {
+      margin: 0;
+      color: #0044cc;
+    }
+    .job-listing p {
+      margin: 0.5rem 0;
+    }
+    .apply-button {
+      background: linear-gradient(rgb(27, 50, 110), rgb(133, 62, 219));
+      color: #fff;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .apply-button:hover {
+      opacity: 0.9;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    form label {
+      margin: 0.5rem 0 0.2rem;
+    }
+    form input, form textarea, form select {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+    form button {
+      background: linear-gradient(rgb(27, 50, 110), rgb(133, 62, 219));
+      color: #fff;
+      padding: 0.7rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    form button:hover {
+      opacity: 0.9;
+    }
+    footer {
+      background: linear-gradient(rgb(27, 50, 110), rgb(133, 62, 219));
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Job Listings Page -->
+  <header>
+    <div><strong>Disha HR Service</strong></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Careers</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Job Openings</h1>
+    <div class="filter">
+      <input type="text" placeholder="Search by job title...">
+      <select>
+        <option value="">Job Type</option>
+        <option value="full-time">Full-Time</option>
+        <option value="part-time">Part-Time</option>
+        <option value="internship">Internship</option>
+        <option value="contract">Contract</option>
+      </select>
+      <select>
+        <option value="">Location</option>
+        <option value="remote">Remote</option>
+        <option value="city1">City 1</option>
+        <option value="city2">City 2</option>
+      </select>
+    </div>
+    <div class="job-listing">
+      <h3>Software Developer</h3>
+      <p>Location: Remote</p>
+      <p>Experience: 2+ years</p>
+      <p>Description: Develop web applications using modern frameworks.</p>
+      <a href="application.html" class="apply-button">Apply Now</a>
+    </div>
+    <div class="job-listing">
+      <h3>HR Manager</h3>
+      <p>Location: City 1</p>
+      <p>Experience: 5+ years</p>
+      <p>Description: Manage recruitment and employee engagement activities.</p>
+      <a href="application.html" class="apply-button">Apply Now</a>
+    </div>
+  </div>
+
+  <!-- Job Application Page -->
+  <div class="container">
+    <h1>Job Application</h1>
+    <form action="#" method="post">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="position">Position Applying For</label>
+      <select id="position" name="position" required>
+        <option value="software-developer">Software Developer</option>
+        <option value="hr-manager">HR Manager</option>
+      </select>
+
+      <label for="resume">Upload Resume</label>
+      <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+
+      <label for="message">Why should we hire you?</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Disha HR Service. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

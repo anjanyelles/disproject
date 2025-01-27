@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        header nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        .main {
+            display: flex;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .container {
+            flex: 2;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .sidebar {
+            flex: 1;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            height: fit-content;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+        }
+
+        .header h2 {
+            font-size: 1.8em;
+            margin: 0;
+            color: #007bff;
+        }
+
+        .quick-apply {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .quick-apply:hover {
+            background-color: #0056b3;
+        }
+
+        .details {
+            margin: 20px 0;
+            font-size: 1em;
+        }
+
+        .details p {
+            margin: 5px 0;
+        }
+
+        .skills {
+            margin: 20px 0;
+        }
+
+        .skills span {
+            display: inline-block;
+            background-color: #e9ecef;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin: 5px 5px 0 0;
+        }
+
+        .job-description {
+            margin: 20px 0;
+        }
+
+        .job-description h3 {
+            font-size: 1.2em;
+            margin-top: 15px;
+        }
+
+        .job-description ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        .job-description ul li {
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            font-size: 1em;
+            margin-top: 5px;
+        }
+
+        .location img {
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 0.9em;
+            margin-top: 20px;
+            color: #666;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GoodSpace</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Jobs</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <div class="container">
+            <div class="header">
+                <h2>Digital Marketing Specialist</h2>
+                <button class="quick-apply">Quick Apply</button>
+            </div>
+
+            <div class="details">
+                <p><strong>Years of Experience:</strong> 1-3 Years</p>
+                <div class="location">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/marker.png" alt="Location Icon">
+                    <p>New Delhi, Delhi, India</p>
+                </div>
+            </div>
+
+            <div class="skills">
+                <span>Digital Marketing</span>
+                <span>SEO</span>
+                <span>Google Analytics</span>
+                <span>Google Adwords</span>
+                <span>SEM</span>
+            </div>
+
+            <div class="job-description">
+                <h3>Overview:</h3>
+                <p>Join our dynamic team in New Delhi as a Digital Marketing Specialist. Drive growth and brand visibility in a fast-paced environment.</p>
+
+                <h3>Responsibilities:</h3>
+                <ul>
+                    <li>Implement and optimize digital marketing campaigns across various channels.</li>
+                    <li>Enhance SEO strategies and content marketing.</li>
+                    <li>Analyze performance using Google Analytics; manage Google Adwords campaigns.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>Other Jobs</h3>
+            <ul>
+                <li><a href="#">Marketing & Sales Executive</a></li>
+                <li><a href="#">Business Manager</a></li>
+                <li><a href="#">Travel Consultant</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 GoodSpace. All Rights Reserved. <a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>

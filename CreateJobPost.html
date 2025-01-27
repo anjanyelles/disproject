@@ -46,6 +46,52 @@
       border: 1px solid #ccc;
       border-radius: 4px;
     }
+    select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  appearance: none; /* Remove default dropdown arrow */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+}
+
+select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+select::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-top-color: #333;
+  pointer-events: none;
+}
+
+.select-container {
+  position: relative;
+}
+
+.select-container::after {
+  content: '▼';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 12px;
+  color: #666;
+}
+
     .career_job-listing {
       margin-bottom: 1rem;
       padding: 1rem;
@@ -616,44 +662,79 @@ background: white;
 <section>
 
     <h2 style="text-align: center;font-size: 24px;margin-bottom: 2rem;">Create Job Post</h2>
+<div style="width: auto;display: flex;align-items: center;justify-content: center;padding: 2rem;">
+  <p  style="text-align: center;">
+    <strong>Dishha</strong> is a platform that helps make tasks easier and faster. It is designed to guide users in achieving their goals while saving time and improving efficiency.
+  </p></div>
+   
     <div class="form-container">
     
-        <form id="jobForm">
-          <label for="title">Job Title</label>
-          <input type="text" id="title" name="title" required>
-    
-          <label for="location">Location</label>
-          <input type="text" id="location" name="location" required>
-    
-          <label for="experience">Experience</label>
-          <input type="text" id="experience" name="experience" required>
-    
-          <label for="description">Description</label>
-          <textarea id="description" name="description" required></textarea>
-    
-          <label for="type">Job Type</label>
-          <input type="text" id="type" name="type" required>
-    
-          <label for="salaryRange">Salary Range</label>
-          <input type="text" id="salaryRange" name="salaryRange" required>
-    
-          <label for="skillsRequired">Skills Required (comma separated)</label>
-          <input type="text" id="skillsRequired" name="skillsRequired" required>
-    
-          <label for="benefits">Benefits (comma separated)</label>
-          <input type="text" id="benefits" name="benefits" required>
-    
-          <label for="responsibilities">Responsibilities (comma separated)</label>
-          <input type="text" id="responsibilities" name="responsibilities" required>
-    
-          <label for="careerGrowth">Career Growth</label>
-          <input type="text" id="careerGrowth" name="careerGrowth" required>
-    
-          <label for="companyCulture">Company Culture</label>
-          <input type="text" id="companyCulture" name="companyCulture" required>
-    
-          <button type="submit">Submit Job Post</button>
-        </form>
+      <form id="jobForm">
+        <label for="title">Job Title</label>
+        <input type="text" id="title" name="title" required>
+      
+        <label for="companyName">Company Name</label>
+        <input type="text" id="companyName" name="companyName" required>
+      
+        <label for="industry">Industry</label>
+        <input type="text" id="industry" name="industry">
+      
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" required>
+      
+        <label for="experience">Experience</label>
+        <input type="text" id="experience" name="experience" required>
+      
+        <label for="education">Education Requirements</label>
+        <input type="text" id="education" name="education">
+      
+        <label for="description">Description</label>
+        <textarea id="description" name="description" required></textarea>
+      
+        <label for="type">Job Type</label>
+        <input type="text" id="type" name="type" required>
+      
+        <label for="salaryRange">Salary Range</label>
+        <input type="text" id="salaryRange" name="salaryRange" required>
+      
+        <label for="skillsRequired">Skills Required (comma separated)</label>
+        <input type="text" id="skillsRequired" name="skillsRequired" required>
+      
+        <label for="benefits">Benefits (comma separated)</label>
+        <input type="text" id="benefits" name="benefits" required>
+      
+        <label for="responsibilities">Responsibilities (comma separated)</label>
+        <input type="text" id="responsibilities" name="responsibilities" required>
+      
+        <label for="careerGrowth">Career Growth</label>
+        <input type="text" id="careerGrowth" name="careerGrowth">
+      
+        <label for="companyCulture">Company Culture</label>
+        <input type="text" id="companyCulture" name="companyCulture">
+      
+        <label for="applicationDeadline">Application Deadline</label>
+        <input type="date" id="applicationDeadline" name="applicationDeadline">
+      
+        <label for="jobLocationType">Job Location Type</label>
+        <br>
+        <select id="jobLocationType" name="jobLocationType">
+          <option value="Remote">Remote</option>
+          <option value="On-site">On-site</option>
+          <option value="Hybrid">Hybrid</option>
+        </select>
+      <br>
+        <label for="languagesRequired">Languages Required (comma separated)</label>
+        <input type="text" id="languagesRequired" name="languagesRequired">
+      
+        <label for="startDate">Start Date</label>
+        <input type="date" id="startDate" name="startDate">
+      
+        <label for="keywords">Keywords (comma separated)</label>
+        <input type="text" id="keywords" name="keywords">
+      
+        <button type="submit">Submit Job Post</button>
+      </form>
+      
       </div>
 </section>
 

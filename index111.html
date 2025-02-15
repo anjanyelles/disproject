@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Sliding Image Slider with Captions</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: transparent;
+        }
+
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); */
+        }
+
+        .slider-wrapper {
+            display: flex;
+            width: 500%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            position: relative;
+            width: 100%;
+        }
+
+        .slider-img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        /* Caption Styling */
+        .caption {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            width: 60%;
+        }
+
+        .caption h2 {
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+
+        /* Buttons */
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            border-radius: 5px;
+        }
+
+        .slider-btn.prev {
+            left: 10px;
+        }
+
+        .slider-btn.next {
+            right: 10px;
+        }
+
+        .slider-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="slider-container">
+        <div class="slider-wrapper">
+            <div class="slide">
+                <img src="https://source.unsplash.com/800x400/?business,team" alt="Image 1" class="slider-img">
+                <div class="caption">
+                    <h2>Business Collaboration</h2>
+                    <p>Teamwork leads to success. Join hands and grow together.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://source.unsplash.com/800x400/?technology,innovation" alt="Image 2" class="slider-img">
+                <div class="caption">
+                    <h2>Innovative Technology</h2>
+                    <p>Leading the future with cutting-edge advancements.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://source.unsplash.com/800x400/?nature,peace" alt="Image 3" class="slider-img">
+                <div class="caption">
+                    <h2>Nature's Beauty</h2>
+                    <p>Find peace and inspiration in the heart of nature.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://source.unsplash.com/800x400/?education,learning" alt="Image 4" class="slider-img">
+                <div class="caption">
+                    <h2>Education & Growth</h2>
+                    <p>Knowledge is the key to unlocking endless opportunities.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://source.unsplash.com/800x400/?fitness,health" alt="Image 5" class="slider-img">
+                <div class="caption">
+                    <h2>Healthy Lifestyle</h2>
+                    <p>Stay active and live a healthy, fulfilling life.</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="slider-btn prev" onclick="prevSlide()">❮</button>
+        <button class="slider-btn next" onclick="nextSlide()">❯</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slider = document.querySelector(".slider-wrapper");
+            const slides = document.querySelectorAll(".slide");
+            let index = 0;
+            const totalSlides = slides.length;
+
+            function slideImages() {
+                index++;
+                if (index >= totalSlides) {
+                    index = 0; // Reset to first slide
+                }
+                slider.style.transform = `translateX(-${index * 100 / totalSlides}%)`;
+            }
+
+            let autoSlide = setInterval(slideImages, 3000); // Auto-slide every 3s
+
+            // Manual Controls
+            window.nextSlide = function () {
+                clearInterval(autoSlide);
+                slideImages();
+                autoSlide = setInterval(slideImages, 3000);
+            };
+
+            window.prevSlide = function () {
+                clearInterval(autoSlide);
+                index--;
+                if (index < 0) {
+                    index = totalSlides - 1;
+                }
+                slider.style.transform = `translateX(-${index * 100 / totalSlides}%)`;
+                autoSlide = setInterval(slideImages, 3000);
+            };
+        });
+    </script>
+
+</body>
+</html>

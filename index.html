@@ -12,198 +12,220 @@
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/css/animate.css" />
   <link rel="stylesheet" href="assets/css/tailwind.css" />
-<link rel="stylesheet"  href="./cardstyle.css"    />
-<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.16/dist/sweetalert2.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./cardstyle.css" />
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.16/dist/sweetalert2.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-    <style>
-        /* Custom styles for the progress circles */
-        .progressnew {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }.bg-primary {
---tw-bg-opacity: 1;
-background: linear-gradient(#1b326e , #853edb);
+  <style>
+    /* Custom styles for the progress circles */
+    .progressnew {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .bg-primary {
+      --tw-bg-opacity: 1;
+      background: linear-gradient(#1b326e, #853edb);
+    }
+
+    .specializations-box {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .datajobtitle {
+      color: #853edb !important;
+    }
+
+    .bg-transparent {
+      /* background: linear-gradient(#1b326e , #853edb); */
+      border-bottom: 1px solid gray;
+    }
+
+    .lg\:text-white {
+      --tw-text-opacity: 1;
+      color: rgba(28, 26, 26, 1);
+    }
+
+    .lg\:text-white :hover {
+      --tw-text-opacity: 1;
+      color: rgba(28, 26, 26, 1);
+    }
+
+    .specializations-box:hover {
+      transform: scale(1.05);
+    }
+
+
+
+    /* From Uiverse.io by eirikvold */
+    .button {
+
+      font-family: inherit;
+      font-size: 18px;
+      background: linear-gradient(rgb(27, 50, 110), rgb(133, 62, 219));
+      color: white;
+      padding: 0.8em 1.2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      border-radius: 25px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .button:active {
+      transform: scale(0.95);
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .button span {
+      display: block;
+      margin-left: 0.4em;
+      transition: all 0.3s;
+    }
+
+    .colorcombo :hover {
+      color: black !important;
+    }
+
+    .button svg {
+      width: 18px;
+      height: 18px;
+      fill: white;
+      transition: all 0.3s;
+    }
+
+    .button .svg-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin-right: 0.5em;
+      transition: all 0.3s;
+    }
+
+    .button:hover .svg-wrapper {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .button:hover svg {
+      transform: rotate(45deg);
+    }
+
+
+
+
+    .group:hover .lg\:group-hover\:text-white {
+      --tw-text-opacity: 1;
+      color: black;
+    }
+
+    .max-w-\[845px\] {
+      max-width: 1000px;
+    }
+  </style>
+  <style>
+    .slider-container {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); */
+    }
+
+    .slider-wrapper {
+      display: flex;
+      width: 500%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      position: relative;
+      width: 100%;
+    }
+
+    .slider-img {
+      width: 100%;
+      height: 80vh;
+      object-fit: cover;
+    }
+
+    /* Caption Styling */
+    .caption {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 15px;
+      width: 60%;
+    }
+
+    .caption h2 {
+      margin-bottom: 5px;
+      font-size: 20px;
+    }
+
+    /* Buttons */
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 24px;
+    }
+
+    .slider-btn.prev {
+      left: 10px;
+    }
+
+    .slider-btn.next {
+      right: 10px;
+    }
+
+    .slider-btn:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+
+/* Hide the mobile section on large screens */
+.mobile-screen-section {
+  display: none;
 }
-        .specializations-box {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            transition: transform 0.3s;
-        }
 
-        .datajobtitle{
-          color: #853edb !important;
-        }
-
-        .bg-transparent {
-/* background: linear-gradient(#1b326e , #853edb); */
-border-bottom:   1px solid gray;
-}
-
-.lg\:text-white {
---tw-text-opacity: 1;
-color: rgba(28, 26, 26, 1);
-}
-
-.lg\:text-white :hover{
---tw-text-opacity: 1;
-color: rgba(28, 26, 26, 1);
-}
-        .specializations-box:hover {
-            transform: scale(1.05);
-        }
-
-
-
-        /* From Uiverse.io by eirikvold */ 
-.button {
+/* Show the mobile section and hide the large screen section on smaller screens */
+@media (max-width: 768px) {
+  .large-screen-section {
+    display: none;
+  }
   
-  font-family: inherit;
-  font-size: 18px;
-  background: linear-gradient(rgb(27, 50, 110), rgb(133, 62, 219));
-  color: white;
-  padding: 0.8em 1.2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  border-radius: 25px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s;
+  .mobile-screen-section {
+    display: block;
+  }
 }
 
-.button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-}
-
-.button:active {
-  transform: scale(0.95);
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.button span {
-  display: block;
-  margin-left: 0.4em;
-  transition: all 0.3s;
-}
-.colorcombo :hover{
-  color: black !important;
-}
-.button svg {
-  width: 18px;
-  height: 18px;
-  fill: white;
-  transition: all 0.3s;
-}
-
-.button .svg-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.2);
-  margin-right: 0.5em;
-  transition: all 0.3s;
-}
-
-.button:hover .svg-wrapper {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.button:hover svg {
-  transform: rotate(45deg);
-}
-
-
-
-
-.group:hover .lg\:group-hover\:text-white {
-  --tw-text-opacity: 1;
-  color: black ;
-}
-.max-w-\[845px\] {
-max-width: 1000px;
-}
-
-    </style>
-    <style>
-   
-
-      .slider-container {
-          width: 100%;
-          height: 100vh;
-          overflow: hidden;
-          position: relative;
-          /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); */
-      }
-
-      .slider-wrapper {
-          display: flex;
-          width: 500%;
-          transition: transform 0.5s ease-in-out;
-      }
-
-      .slide {
-          position: relative;
-          width: 100%;
-      }
-
-      .slider-img {
-          width: 100%;
-          height: 80vh;
-          object-fit: cover;
-      }
-
-      /* Caption Styling */
-      .caption {
-          position: absolute;
-          bottom: 20px;
-          left: 20px;
-          background: rgba(0, 0, 0, 0.6);
-          color: white;
-          padding: 15px;
-          width: 60%;
-      }
-
-      .caption h2 {
-          margin-bottom: 5px;
-          font-size: 20px;
-      }
-
-      /* Buttons */
-      .slider-btn {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          background-color: rgba(0, 0, 0, 0.5);
-          color: white;
-          border: none;
-          padding: 10px;
-          cursor: pointer;
-          font-size: 24px;
-      }
-
-      .slider-btn.prev {
-          left: 10px;
-      }
-
-      .slider-btn.next {
-          right: 10px;
-      }
-
-      .slider-btn:hover {
-          background-color: rgba(0, 0, 0, 0.8);
-      }
 
   </style>
 
@@ -216,7 +238,7 @@ max-width: 1000px;
 
 <body>
 
-  
+
   <!-- ====== Navbar Section Start -->
   <div class="absolute top-0 left-0 z-40 flex items-center w-full bg-transparent ud-header">
     <div class="container">
@@ -243,7 +265,7 @@ max-width: 1000px;
             <nav id="navbarCollapse"
               class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6">
               <ul class="blcok lg:flex 2xl:ml-20">
-             
+
                 <li class="relative submenu-item group">
                   <a href="about.html"
                     class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
@@ -301,7 +323,7 @@ max-width: 1000px;
                 <li class="relative submenu-item group">
                   <a href="hrservice.html"
                     class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
-                    OUR SERVICES 
+                    OUR SERVICES
 
                     <!-- <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -310,7 +332,7 @@ max-width: 1000px;
                     </svg> -->
                   </a>
                 <li class="relative submenu-item group">
-                  <a href="javascript:void(0)"
+                  <a href="https://career.dishha.com/jobseeker/currentjobs"
                     class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
                     CAREERS
 
@@ -322,7 +344,7 @@ max-width: 1000px;
                   </a>
                   <!-- <div
                     class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full"> -->
-                    <!-- <a href=""
+                  <!-- <a href=""
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       About Page
                     </a>
@@ -342,15 +364,15 @@ max-width: 1000px;
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Blog Details Page
                     </a> -->
-                    <!-- <a href=""
+                  <!-- <a href=""
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Sign Up Page
                     </a> -->
-                    <!-- <a href="signin.html"
+                  <!-- <a href="signin.html"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Sign In Page
                     </a> -->
-                    <!-- <a href=".html"
+                  <!-- <a href=".html"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       404 Page
                     </a> -->
@@ -362,20 +384,20 @@ max-width: 1000px;
                   <a href="Getintouch.html"
                     class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
                     CONTACT
-          
+
                   </a>
-                </li>
+
                 <li class="relative submenu-item group">
-                  <a href="javascript:void(0)"
+                  <!-- <a href="javascript:void(0)"
                     class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
-                    JOBS
+                    JOBS -->
 
                     <!-- <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z" />
                     </svg> -->
-                  </a>
+                  <!-- </a> -->
                   <div
                     class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
                     <!-- <a href=""
@@ -402,33 +424,40 @@ max-width: 1000px;
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Sign Up Page
                     </a> -->
-                    <a href="signin.html"
+                    <a href="https://career.dishha.com/jobseeker/currentjobs"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Browse Jobs
                     </a>
                     <a href="SubmityourcV.html"
-                    class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                    Submit Your CV
-                  </a>
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Submit Your CV
+                    </a>
                     <!-- <a href=".html"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       404 Page
                     </a> -->
                   </div>
                 </li>
+
                 <li class="relative submenu-item group block lg:hidden">
-                  <a href="javascript:void(0)"
+                  <a href=" https://career.dishha.com/jobseeker/register"
                     class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
-                    
-                         Login
-                
-                    <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z" />
-                    </svg>
+
+                    Register
+
+                 
                   </a>
-                  <div
+               
+                </li>
+                <li class="relative submenu-item group block lg:hidden">
+                  <a href="https://career.dishha.com/jobseeker/login"
+                    class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10 colorcombo">
+
+                    Login
+
+                 
+                  </a>
+                  <!-- <div
                     class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
                     <a href=""
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
@@ -438,12 +467,12 @@ max-width: 1000px;
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Employee
                     </a>
-                  </div>
+                  </div> -->
                 </li>
-                
-             
+
+
               </ul>
-           
+
             </nav>
           </div>
           <div class="flex items-center justify-end pr-16 lg:pr-0">
@@ -489,17 +518,33 @@ max-width: 1000px;
               </span>
             </label> -->
             <div class="hidden sm:flex">
-              <a    href="employer.html">
-                <button class="button"   style="height: 3.1rem;">
+              <a href="https://career.dishha.com/jobseeker/register">
+                <button class="button" style="height: 3.1rem;">
                   <div class="svg-wrapper-1">
-                    <div class="svg-wrapper">
+                    <!-- <div class="svg-wrapper">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                         <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                        <path fill="currentColor"
+                          d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                        </path>
                       </svg>
-                    </div>
+                    </div> -->
                   </div>
-                  <span>Employee </span>
+                  <span>Registration </span>
+                </button>
+              </a>
+
+               <a    href="https://career.dishha.com/jobseeker/login"   style="margin-left: 1rem;">
+                <button class="button"   style="height: 3.1rem;">
+                  <div class="svg-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path fill="currentColor"
+                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                      </path>
+                    </svg>
+                  </div>
+                  <span>Login </span>
                 </button>
               </a>
               <!-- <a    href="employer.html"   style="margin-left: 1rem;">
@@ -522,67 +567,170 @@ max-width: 1000px;
   </section>
 
 
-  <section id="about" class="bg-gray-1 pb-8 pt-100 dark:bg-dark-2 lg:pb-[70px] lg:pt-[90px]"  style="padding-top: 3rem;">
- 
-</section>
+  <section id="about" class="bg-gray-1 pb-8 pt-100 dark:bg-dark-2 lg:pb-[70px] lg:pt-[90px]" style="padding-top: 3rem;">
+
+  </section>
 
 
-<section >
-  <div class="slider-container">
-    <div class="slider-wrapper">
-   
-      <div class="slide">
-        <img src="./assets/images/about/Screenshot 2025-02-12 at 12.10.18 AM.png" alt="Image 1" class="slider-img">
-
-    </div>
-        <!-- <div class="slide">
-            <img src="./assets/images/about/Screenshot 2025-02-11 at 11.56.22 PM.png" alt="Image 1" class="slider-img">
- 
-        </div> -->
+  <!-- Large screen section -->
+  <section class="large-screen-section">
+    <div class="slider-container">
+      <div class="slider-wrapper">
         <div class="slide">
-            <img src="./assets/images/about/Screenshot 2025-02-11 at 11.55.00 PM.png" alt="Image 2" class="slider-img">
-       
+          <img src="./assets/images/about/Screenshot 2025-02-12 at 12.10.18 AM.png" alt="Image 1" class="slider-img">
         </div>
         <div class="slide">
-            <img src="./assets/images/about/Screenshot 2025-02-11 at 11.52.38 PM.png" alt="Image 3" class="slider-img">
-
+          <img src="./assets/images/about/Screenshot 2025-02-11 at 11.55.00 PM.png" alt="Image 2" class="slider-img">
         </div>
         <div class="slide">
-            <img src="./assets/images/about/Screenshot 2025-02-12 at 12.19.02 AM.png" alt="Image 4" class="slider-img">
-            <!-- <div class="caption">
-                <h2>Education & Growth</h2>
-                <p>Knowledge is the key to unlocking endless opportunities.</p>
-            </div> -->
+          <img src="./assets/images/about/Screenshot 2025-02-11 at 11.52.38 PM.png" alt="Image 3" class="slider-img">
         </div>
-
         <div class="slide">
-            <img src="./assets/images/about/Screenshot 2025-02-11 at 11.58.58 PM.png" alt="Image 5" class="slider-img">
-       
+          <img src="./assets/images/about/Screenshot 2025-02-12 at 12.19.02 AM.png" alt="Image 4" class="slider-img">
         </div>
-        
+        <div class="slide">
+          <img src="./assets/images/about/Screenshot 2025-02-11 at 11.58.58 PM.png" alt="Image 5" class="slider-img">
+        </div>
+      </div>
+
+      <button class="slider-btn prev" onclick="prevSlide()">❮</button>
+      <button class="slider-btn next" onclick="nextSlide()">❯</button>
     </div>
 
-    <button class="slider-btn prev" onclick="prevSlide()">❮</button>
-    <button class="slider-btn next" onclick="nextSlide()">❯</button>
-</div>
+    <section id="about" class="bg-gray-1 pb-8 pt-20 dark:bg-dark-2 lg:pb-[70px] lg:pt-[120px]  mobile-screen-section">
+      <div class="container  container11">
+          <div class="wow fadeInUp" data-wow-delay=".2s">
+              <div class="flex flex-wrap items-center -mx-4">
+  
+                
+  
+                  <!-- Text Container -->
+                  <div class="w-full px-4 lg:w-6/12">
+                      <div class="mb-12 max-w-[540px] lg:mb-0">
+                          <h2 class="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
+                            Building careers. Building organisations.
+                          </h2>
+                          <p class="mb-10 text-base  text-2xl leading-relaxed text-body-color dark:text-dark-6">
+                            Dishha Consultants is India's leading executive search and talent advisory firm, proudly shaping the future of multinationals and Indian businesses for over 5 years
+                          </p>
+                          <a href="javascript:void(0)" class="inline-flex items-center justify-center py-3 text-base font-medium text-center text-white border rounded-md border-primary bg-primary px-7 hover:border-blue-dark hover:bg-blue-dark">
+                              Know More
+                          </a>
+                      </div>
+                  </div>
+  
+  
+                    <!-- Image Container -->
+                    <div class="w-full px-4 lg:w-6/12">
+                      <div class="flex flex-wrap -mx-2 sm:-mx-4 lg:-mx-2 xl:-mx-4">
+                          <div class="w-full px-2 sm:px-4">
+                              <div class="mb-4 sm:mb-8 sm:h-[400px] md:h-[540px] lg:h-[400px] xl:h-[500px]">
+                                  <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="about image" class="object-cover object-center w-full h-full" />
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  </section>
+
+  <!-- Mobile screen section -->
+
+  <section class="mobile-screen-section">
+    <div class="container text-center py-10">
+
+      <div class="mb-4 sm:mb-8 sm:h-[400px] md:h-[540px] lg:h-[400px] xl:h-[500px]">
+        <!-- <img src="./assets/images/about/uio.jpg" alt="about image" class="object-cover object-center w-full h-full" /> -->
+    </div>
+    <h4 class="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]"  style="color: blue;font-size: 20px;">
+      <!-- WELCOME TO DISHHA HR SERVICES. -->
+      <!-- We Help You Achieve Success With Our Manpower Solutions. -->
+      Welcome to Dishha HR Services
+    </h4>
+    <h2 class="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
+      <!-- WELCOME TO DISHHA HR SERVICES. -->
+      <!-- We Help You Achieve Success With Our Manpower Solutions. -->
+      We Help You Achieve Success With Our Manpower Solutions.
+    </h2>
+      <p> from building teams for your payroll to contractual and remote teams. from a people-first approach to technology-driven outsourcing. Soultions, we are your success partners.</p>
+      <a href="employer.html">
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-md mt-4">Get In Touch</button>
+      </a>
+    </div>
+  </section>
+  <section class="mobile-screen-section">
+    <div class="container text-center py-10">
+
+      <div class="mb-4 sm:mb-8 sm:h-[400px] md:h-[540px] lg:h-[400px] xl:h-[500px]">
+        <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="about image" class="object-cover object-center w-full h-full" />
+    </div>
+      <h2 class="text-2xl font-bold">   Building careers. Building organisations.</h2>
+      <p> Dishha Consultants is India's leading executive search and talent advisory firm, proudly shaping the future of multinationals and Indian businesses for over 5 years.</p>
+      <a href="employer.html">
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-md mt-4">Get In Touch</button>
+      </a>
+    </div>
+  </section>
 
 
-</section>
+
+  <section class="mobile-screen-section">
+    <div class="container text-center py-10">
+
+      <div class="mb-4 sm:mb-8 sm:h-[400px] md:h-[540px] lg:h-[400px] xl:h-[500px]">
+        <img src="./assets/images/about/uio.jpg" alt="about image" class="object-cover object-center w-full h-full" />
+    </div>
+      <h2 class="text-2xl font-bold">Overview</h2>
+      <p> We leverage deep insights across various industries to deliver tailored recruitment solutions, aligning with our clients' specific needs. Our sourcing team, specialized in diverse sectors, has established a reputation for excellence in staffing services, fostering strong relationships through tailored offerings that adapt to different governance structures.</p>
+      <a href="employer.html">
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-md mt-4">Get In Touch</button>
+      </a>
+    </div>
+  </section>
 
 
-  <div id="home" class="bg-primary pt-[60px]"  style="padding: 3rem;">
+  <section class="mobile-screen-section">
+    <div class="container text-center py-10">
+
+      <div class="mb-4 sm:mb-8 sm:h-[400px] md:h-[540px] lg:h-[400px] xl:h-[500px]">
+        <img src="./assets/images/about/uio.jpg" alt="about image" class="object-cover object-center w-full h-full" />
+    </div>
+      <h2 class="text-2xl font-bold">Client-Centric Approach:</h2>
+      <p class="mb-2 text-base leading-relaxed text-body-color dark:text-dark-6">
+
+        We prioritize understanding and addressing the unique needs of each 
+        client.
+      </p>
+      <p class="mb-2 text-base leading-relaxed text-body-color dark:text-dark-6">
+
+        <strong>Expertise in the Market: </strong> With over a decade of experience, we leverage strategic partnerships and industry insights.
+      </p>
+      <p class="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
+      <strong>Commitment to Excellence:</strong>   Our dedicated team works tirelessly to ensure a smooth and effective recruitment process for both employers and job seekers.
+      </p>
+      <a href="employer.html">
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-md mt-4">Get In Touch</button>
+      </a>
+    </div>
+  </section>
+  <div id="home" class="bg-primary pt-[60px]" style="padding: 3rem;">
     <div class="container">
       <div class="flex flex-wrap items-center -mx-4">
         <div class="w-full px-4">
           <div class="hero-content wow fadeInUp mx-auto max-w-[780px] text-center" data-wow-delay=".2s">
             <h1
-              class="mb-3 text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]"   style="color: #F5BD1F;">
+              class="mb-3 text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]"
+              style="color: #F5BD1F;">
               About DISHHA
             </h1>
             <p class="mx-auto mb-9 max-w-[800px] text-base font-medium text-white sm:text-lg sm:leading-[1.44]">
-              DISHHA HR Staffing, a dedicated unit of the DISHHA group, excels in providing human resource consulting services. Originating in India, we have expanded our reach to South Asia and the UAE, with plans for further global growth. Our main office is located in Hyderabad, supported by a network of representatives.
-            
-            <!-- <ul class="flex flex-wrap items-center justify-center gap-5 mb-10">
+              DISHHA HR Staffing, a dedicated unit of the DISHHA group, excels in providing human resource consulting
+              services. Originating in India, we have expanded our reach to South Asia and the UAE, with plans for
+              further global growth. Our main office is located in Hyderabad, supported by a network of representatives.
+
+              <!-- <ul class="flex flex-wrap items-center justify-center gap-5 mb-10">
               <li>
                 <a href="https://links.tailgrids.com/play-download"
                   class="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color">
@@ -595,7 +743,7 @@ max-width: 1000px;
           </div>
         </div>
 
-  
+
       </div>
     </div>
   </div>
@@ -605,7 +753,7 @@ max-width: 1000px;
 
 
 
-  
+
   <!-- <div id="home" class="relative overflow-hidden bg-primary pt-[120px] md:pt-[130px] lg:pt-[160px]">
     <div class="container">
       <div class="flex flex-wrap items-center -mx-4">
@@ -618,7 +766,7 @@ max-width: 1000px;
             <p class="mx-auto mb-9 max-w-[600px] text-base font-medium text-white sm:text-lg sm:leading-[1.44]">
               The Executive Search industry's most seasoned consultants, bringing an agile mindset, an empathetic perspective and an entrepreneurial spirit to every client engagement.
              -->
-            <!-- <ul class="flex flex-wrap items-center justify-center gap-5 mb-10">
+  <!-- <ul class="flex flex-wrap items-center justify-center gap-5 mb-10">
               <li>
                 <a href="https://links.tailgrids.com/play-download"
                   class="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color">
@@ -627,11 +775,11 @@ max-width: 1000px;
               </li>
 
             </ul> -->
-<!-- 
+  <!-- 
           </div>
         </div> -->
 
-        <!-- <div class="w-full px-4">
+  <!-- <div class="w-full px-4">
           <div class="wow fadeInUp relative z-10 mx-auto max-w-[845px]" data-wow-delay=".25s">
             <div class="mt-16">
               <img src="https://www.abcconsultants.in/wp-content/uploads/2023/11/team-grp.webp" alt="hero"
@@ -807,117 +955,123 @@ max-width: 1000px;
             </div>
           </div>
         </div> -->
-      </div>
-    </div>
+  </div>
+  </div>
   </div>
   <!-- ====== Hero Section End -->
 
 
 
 
-<br>
-<br>
-<section class="comm-sec py-12">
-  <div class="container mx-auto px-4">
+  <br>
+  <br>
+  <section class="comm-sec py-12">
+    <div class="container mx-auto px-4">
       <div class="sec-heading text-center mb-8">
-          <div class="main-head text-3xl font-bold mb-2">Industry Specialisations</div>
-          <br>
-          <p class="sub-line text-lg text-gray-600">
-              We recognize that each industry has its own nuances in terms of management style, hiring practices, and compensation norms.
-              To provide clients with specialized search solutions, Dishha has developed expertise in the following industries.
-          </p>
+        <div class="main-head text-3xl font-bold mb-2">Industry Specialisations</div>
+        <br>
+        <p class="sub-line text-lg text-gray-600">
+          We recognize that each industry has its own nuances in terms of management style, hiring practices, and
+          compensation norms.
+          To provide clients with specialized search solutions, Dishha has developed expertise in the following
+          industries.
+        </p>
       </div>
-      
+
       <div class="specializations-sec">
-          <div class="swiper specializationsSwiper">
-              <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                      <a href="" class="specializations-box">
-                       
-                          <div class="specializations-icon">
-                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/06/sp-icon-02.svg" alt="" class="mb-2">
-                          </div>
-                          <p class="text-lg">Automobile &amp; Auto Components</p>
-                      </a>
-                  </div>
-                  <div class="swiper-slide">
-                      <a href="https://www.abcconsultants.in/our-industries/financial-services/" class="specializations-box">
-                        
-                          <div class="specializations-icon">
-                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/10/Finance.svg" alt="" class="mb-2">
-                          </div>
-                          <p class="text-lg">Financial Services</p>
-                      </a>
-                  </div>
-                  <div class="swiper-slide">
-                      <a href="" class="specializations-box">
-                        
-                          <div class="specializations-icon">
-                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/06/sp-icon-04.svg" alt="" class="mb-2">
-                          </div>
-                          <p class="text-lg">Industrial</p>
-                      </a>
-                  </div>
-                  <div class="swiper-slide">
-                      <a href="" class="specializations-box">
-                        
-                          <div class="specializations-icon">
-                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/06/sp-icon-05.svg" alt="" class="mb-2">
-                          </div>
-                          <p class="text-lg">Technology</p>
-                      </a>
-                  </div>
-                  <div class="swiper-slide">
-                      <a href="" class="specializations-box">
-                        
-                          <div class="specializations-icon">
-                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/10/Consumer.svg" alt="" class="mb-2">
-                          </div>
-                          <p class="text-lg">Consumer</p>
-                      </a>
-                  </div>
-                  <div class="swiper-slide">
-                      <a href="" class="specializations-box">
-                        
-                          <div class="specializations-icon">
-                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/10/Media.svg" alt="" class="mb-2">
-                          </div>
-                          <p class="text-lg">Media &amp; Entertainment</p>
-                      </a>
-                  </div>
-                  <div class="swiper-slide">
-                      <a href="" class="specializations-box">
-                       
-                          <div class="specializations-icon">
-                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/10/Healthcare.svg" alt="" class="mb-2">
-                          </div>
-                          <p class="text-lg">Pharma &amp; Healthcare</p>
-                      </a>
-                  </div>
-                  <div class="swiper-slide">
-                      <a href="" class="specializations-box">
-                        
-                          <div class="specializations-icon">
-                              <img src="https://www.abcconsultants.in/wp-content/uploads/2023/10/Retail.svg" alt="" class="mb-2">
-                          </div>
-                          <p class="text-lg">Retail</p>
-                      </a>
-                  </div>
-              </div>
-              <div class="navigation flex justify-between mt-4">
-                  <div class="swiper-button-prev bg-gray-200 p-2 rounded-full">
+        <div class="swiper specializationsSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="" class="specializations-box">
 
-                  </div>
-                  <div class="swiper-button-next bg-gray-200 p-2 rounded-full">
+                <div class="specializations-icon">
+                  <img src="https://www.abcconsultants.in/wp-content/uploads/2023/06/sp-icon-02.svg" alt=""
+                    class="mb-2">
+                </div>
+                <p class="text-lg">Automobile &amp; Auto Components</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="https://www.abcconsultants.in/our-industries/financial-services/" class="specializations-box">
 
-                  </div>
-              </div>
+                <div class="specializations-icon">
+                  <img src="https://www.abcconsultants.in/wp-content/uploads/2023/10/Finance.svg" alt="" class="mb-2">
+                </div>
+                <p class="text-lg">Financial Services</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="" class="specializations-box">
+
+                <div class="specializations-icon">
+                  <img src="https://www.abcconsultants.in/wp-content/uploads/2023/06/sp-icon-04.svg" alt=""
+                    class="mb-2">
+                </div>
+                <p class="text-lg">Industrial</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="" class="specializations-box">
+
+                <div class="specializations-icon">
+                  <img src="https://www.abcconsultants.in/wp-content/uploads/2023/06/sp-icon-05.svg" alt=""
+                    class="mb-2">
+                </div>
+                <p class="text-lg">Technology</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="" class="specializations-box">
+
+                <div class="specializations-icon">
+                  <img src="https://www.abcconsultants.in/wp-content/uploads/2023/10/Consumer.svg" alt="" class="mb-2">
+                </div>
+                <p class="text-lg">Consumer</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="" class="specializations-box">
+
+                <div class="specializations-icon">
+                  <img src="https://www.abcconsultants.in/wp-content/uploads/2023/10/Media.svg" alt="" class="mb-2">
+                </div>
+                <p class="text-lg">Media &amp; Entertainment</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="" class="specializations-box">
+
+                <div class="specializations-icon">
+                  <img src="https://www.abcconsultants.in/wp-content/uploads/2023/10/Healthcare.svg" alt=""
+                    class="mb-2">
+                </div>
+                <p class="text-lg">Pharma &amp; Healthcare</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="" class="specializations-box">
+
+                <div class="specializations-icon">
+                  <img src="https://www.abcconsultants.in/wp-content/uploads/2023/10/Retail.svg" alt="" class="mb-2">
+                </div>
+                <p class="text-lg">Retail</p>
+              </a>
+            </div>
           </div>
+          <div class="navigation flex justify-between mt-4">
+            <div class="swiper-button-prev bg-gray-200 p-2 rounded-full">
+
+            </div>
+            <div class="swiper-button-next bg-gray-200 p-2 rounded-full">
+
+            </div>
+          </div>
+        </div>
       </div>
-  </div>
-</section>
-<br>
-<br>
+    </div>
+  </section>
+  <br>
+  <br>
 
 
 
@@ -1055,19 +1209,22 @@ max-width: 1000px;
               </h2>
               <br>
               <p class="mx-auto mb-6 text-base leading-[1.5] text-white" style="max-width: 920px;line-height: 1rem;">
-                Vision: To be the preferred recruitment and staffing agency, known for superior service and a platform for job seekers.
+                Vision: To be the preferred recruitment and staffing agency, known for superior service and a platform
+                for job seekers.
               </p>
               <p class="mx-auto mb-6 text-base leading-[1.5] text-white" style="max-width: 920px;line-height: 1rem;">
-                Mission: Partner with clients to effectively manage and retain skilled workforces, delivering consistently.
+                Mission: Partner with clients to effectively manage and retain skilled workforces, delivering
+                consistently.
               </p>
               <p class="mx-auto mb-6 text-base leading-[1.5] text-white" style="max-width: 920px;line-height: 1rem;">
-                Values: We uphold the highest standards of ethics, collaboration, passion, adaptability, respect, and accountability.
+                Values: We uphold the highest standards of ethics, collaboration, passion, adaptability, respect, and
+                accountability.
               </p>
-              
-       <br>
+
+              <br>
               <a href="javascript:void(0)"
-                class="inline-block rounded-md border border-transparent bg-secondary px-7 py-3 text-black font-medium text-white transition hover:bg-[#0BB489]"  
-                style="background-color: #F5BD1F;color: black;" >
+                class="inline-block rounded-md border border-transparent bg-secondary px-7 py-3 text-black font-medium text-white transition hover:bg-[#0BB489]"
+                style="background-color: #F5BD1F;color: black;">
                 go to the overview
               </a>
             </div>
@@ -2034,13 +2191,13 @@ max-width: 1000px;
 
 
 
-  
-  
 
 
 
-  
-</main>
+
+
+
+  </main>
   <!-- ====== Blog Section End -->
 
   <!-- ====== Contact Start ====== -->
@@ -2181,20 +2338,20 @@ max-width: 1000px;
             <a href="javascript:void(0)" class="mb-6 inline-block max-w-[160px]">
               <img src="assets/images/logo/diowhite.png" alt="logo" class="max-w-full" />
             </a>
-      
+
             <p class="mb-2 max-w-[270px] text-base text-gray-7">
 
               Helping You Reach Your Dreams
               <!-- We create digital experiences for brands and companies by using
               technology. -->
             </p>
-            <p class="mb-2 max-w-[270px] text-base text-gray-7"  id="contact">
+            <p class="mb-2 max-w-[270px] text-base text-gray-7" id="contact">
               Email: <a href="mailto:hr@dishha.com" class="text-blue-500 underline">hr@dishha.com</a>
-          </p>
-          <p class="mb-8 max-w-[270px] text-base text-gray-7">
+            </p>
+            <p class="mb-8 max-w-[270px] text-base text-gray-7">
               Contact: <a href="tel:9398821233" class="text-blue-500 underline">9398821233</a>
-          </p>
-          
+            </p>
+
             <div class="flex items-center -mx-3">
               <a href="javascript:void(0)" class="px-3 text-gray-7 hover:text-white">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -2562,19 +2719,19 @@ max-width: 1000px;
   <script src="assets/js/main.js"></script>
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNMFM44J4E"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KNMFM44J4E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-KNMFM44J4E');
-</script>
+    gtag('config', 'G-KNMFM44J4E');
+  </script>
 
 
-<script src="scriptdata.js"></script>
+  <script src="scriptdata.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.16/dist/sweetalert2.all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.16/dist/sweetalert2.all.min.js"></script>
 
   <script>
     // ==== for menu scroll
@@ -2648,77 +2805,77 @@ max-width: 1000px;
   </script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
       const slider = document.querySelector(".slider-wrapper");
       const slides = document.querySelectorAll(".slide");
       let index = 0;
       const totalSlides = slides.length;
 
       function slideImages() {
-          index++;
-          if (index >= totalSlides) {
-              index = 0; // Reset to first slide
-          }
-          slider.style.transform = `translateX(-${index * 100 / totalSlides}%)`;
+        index++;
+        if (index >= totalSlides) {
+          index = 0; // Reset to first slide
+        }
+        slider.style.transform = `translateX(-${index * 100 / totalSlides}%)`;
       }
 
       let autoSlide = setInterval(slideImages, 3000); // Auto-slide every 3s
 
       // Manual Controls
       window.nextSlide = function () {
-          clearInterval(autoSlide);
-          slideImages();
-          autoSlide = setInterval(slideImages, 3000);
+        clearInterval(autoSlide);
+        slideImages();
+        autoSlide = setInterval(slideImages, 3000);
       };
 
       window.prevSlide = function () {
-          clearInterval(autoSlide);
-          index--;
-          if (index < 0) {
-              index = totalSlides - 1;
-          }
-          slider.style.transform = `translateX(-${index * 100 / totalSlides}%)`;
-          autoSlide = setInterval(slideImages, 3000);
+        clearInterval(autoSlide);
+        index--;
+        if (index < 0) {
+          index = totalSlides - 1;
+        }
+        slider.style.transform = `translateX(-${index * 100 / totalSlides}%)`;
+        autoSlide = setInterval(slideImages, 3000);
       };
-  });
-</script>
-<script>
-    const swiper = new Swiper('.specializationsSwiper', {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        autoplay: {
-            delay: 3000, // Delay between transitions in milliseconds
-            disableOnInteraction: false, // Allows autoplay to continue after user interaction
-        },
-        breakpoints: {
-            640: {
-                slidesPerView: 1,
-            },
-            768: {
-                slidesPerView: 2,
-            },
-            1024: {
-                slidesPerView: 3,
-            },
-        },
     });
-</script>
-<script>
+  </script>
+  <script>
+    const swiper = new Swiper('.specializationsSwiper', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 3000, // Delay between transitions in milliseconds
+        disableOnInteraction: false, // Allows autoplay to continue after user interaction
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  </script>
+  <script>
 
-const myCarouselElement = document.querySelector('#myCarousel')
+    const myCarouselElement = document.querySelector('#myCarousel')
 
-const carousel = new bootstrap.Carousel(myCarouselElement, {
-  interval: 2000,
-  touch: false
-})
-</script>
+    const carousel = new bootstrap.Carousel(myCarouselElement, {
+      interval: 2000,
+      touch: false
+    })
+  </script>
 </body>
 
 </html>

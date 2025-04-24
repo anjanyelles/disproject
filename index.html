@@ -246,6 +246,107 @@
 
   </style>
 
+
+<style>
+
+
+
+  .news-slider {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+  }
+
+  .news-slide {
+    display: none;
+    transition: all 0.5s ease-in-out;
+    padding: 20px;
+  }
+
+  .news-slide.active {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .news-text {
+    flex: 1 1 50%;
+  }
+
+  .news-text h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #333;
+  }
+
+  .news-text p {
+    font-size: 16px;
+    color: #555;
+  }
+
+  .news-text a {
+    text-decoration: none;
+    color: #007BFF;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .news-image {
+    flex: 1 1 45%;
+  }
+
+  .news-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .nav-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px;
+  }
+
+  .nav-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+
+  .nav-buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  @media (max-width: 768px) {
+    .news-slide.active {
+      flex-direction: column;
+    }
+
+    .news-image img {
+      height: 200px;
+    }
+  }
+
+</style>
+
+
+
   <!-- ==== WOW JS ==== -->
   <script src="assets/js/wow.min.js"></script>
   <script>
@@ -809,6 +910,22 @@
       </div>
     </div>
   </div>
+
+
+  <h1
+  class="mb-3 text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]"
+  style="margin-top: 1rem;margin-bottom: 1rem; color: rgb(17, 25, 40); text-align: center;">
+  About DISHHA
+</h1>
+
+
+  <div class="news-slider" id="newsSlider">
+    <div class="nav-buttons">
+      <button onclick="showPreviousSlide()">&#8592;</button>
+      <button onclick="showNextSlide()">&#8594;</button>
+    </div>
+  </div>
+  
 
   <!-- ====== Banner Section End -->
 
@@ -2985,6 +3102,71 @@
       },
     });
   </script>
+
+
+<script>
+  const apiKey = '9454d5a4d97049d4a93da02a1e6e4ae3'; // 🔁 Your NewsAPI Key
+  const url = `https://newsapi.org/v2/everything?q=HR&language=en&sortBy=publishedAt&pageSize=10&apiKey=${apiKey}`;
+  let currentIndex = 0;
+  let newsSlides = [];
+  let autoScroll;
+
+  function fetchNews() {
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        const newsSlider = document.getElementById('newsSlider');
+        newsSlider.innerHTML += ''; // clear only slide part (buttons are already there)
+
+        newsSlides = data.articles.map((article, index) => {
+          const slide = document.createElement('div');
+          slide.className = 'news-slide' + (index === 0 ? ' active' : '');
+          slide.innerHTML = `
+            <img src="${article.urlToImage || 'https://via.placeholder.com/600x300'}" alt="News Image">
+            <h3><a href="${article.url}" target="_blank">${article.title}</a></h3>
+            <p>${article.description || ''}</p>
+          `;
+          newsSlider.insertBefore(slide, newsSlider.firstChild); // insert before buttons
+          return slide;
+        });
+
+        startAutoScroll();
+      })
+      .catch(err => {
+        console.error('Error fetching news:', err);
+      });
+  }
+
+  function showSlide(index) {
+    if (newsSlides.length === 0) return;
+    newsSlides[currentIndex].classList.remove('active');
+    currentIndex = (index + newsSlides.length) % newsSlides.length;
+    newsSlides[currentIndex].classList.add('active');
+  }
+
+  function showNextSlide() {
+    showSlide(currentIndex + 1);
+    resetAutoScroll();
+  }
+
+  function showPreviousSlide() {
+    showSlide(currentIndex - 1);
+    resetAutoScroll();
+  }
+
+  function startAutoScroll() {
+    autoScroll = setInterval(() => {
+      showNextSlide();
+    }, 2000); // Every 6 seconds
+  }
+
+  function resetAutoScroll() {
+    clearInterval(autoScroll);
+    startAutoScroll();
+  }
+
+  fetchNews();
+</script>
   <script>
 
     const myCarouselElement = document.querySelector('#myCarousel')

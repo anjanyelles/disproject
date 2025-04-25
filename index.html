@@ -231,6 +231,13 @@
 .mobile-screen-section {
   display: none;
 }
+.imageSlide{
+  height: 400px !important;
+  width: 500px !important;
+  object-fit: contain;
+}
+
+
 
 /* Show the mobile section and hide the large screen section on smaller screens */
 @media (max-width: 768px) {
@@ -243,6 +250,94 @@
   }
 }
 
+.news-slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.news-slide {
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: #fff;
+}
+
+.news-slide.active {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.news-slide img.imageSlide {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.news-slide h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #2c3e50;
+}
+
+.news-slide p {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.news-slide a {
+  text-decoration: none;
+  color: #2980b9;
+}
+
+.controls {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.controls button {
+  padding: 8px 16px;
+  margin: 0 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+  .news-slide {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-slide img.imageSlide {
+    width: 100%;
+    max-height: 200px;
+  }
+}
+.rowfile{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+   text-align: center;
+}
 
   </style>
 
@@ -332,7 +427,11 @@
   .nav-buttons button:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
+.rowdiv{
+  display: flex;
+  flex-direction: row;
 
+}
   @media (max-width: 768px) {
     .news-slide.active {
       flex-direction: column;
@@ -915,7 +1014,7 @@
   <h1
   class="mb-3 text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]"
   style="margin-top: 1rem;margin-bottom: 1rem; color: rgb(17, 25, 40); text-align: center;">
-  About DISHHA
+  Industry Highlights
 </h1>
 
 
@@ -3106,7 +3205,7 @@
 
 <script>
   const apiKey = '9454d5a4d97049d4a93da02a1e6e4ae3'; // 🔁 Your NewsAPI Key
-  const url = `https://newsapi.org/v2/everything?q=HR&language=en&sortBy=publishedAt&pageSize=10&apiKey=${apiKey}`;
+  const url = `https://newsapi.org/v2/everything?q=HR&language=en&sortBy=publishedAt&pageSize=100&apiKey=${apiKey}`;
   let currentIndex = 0;
   let newsSlides = [];
   let autoScroll;
@@ -3122,10 +3221,14 @@
           const slide = document.createElement('div');
           slide.className = 'news-slide' + (index === 0 ? ' active' : '');
           slide.innerHTML = `
-            <img src="${article.urlToImage || 'https://via.placeholder.com/600x300'}" alt="News Image">
-            <h3><a href="${article.url}" target="_blank">${article.title}</a></h3>
-            <p>${article.description || ''}</p>
-          `;
+  <div class="row rowdiv">
+    <img src="${article.urlToImage || 'https://via.placeholder.com/600x300'}" alt="News Image" class="imageSlide">
+    <div class="rowfile">
+      <h3><a href="${article.url}" target="_blank">${article.title}</a></h3>
+      <p>${article.description || ''}</p>
+    </div>
+  </div>
+  x `;
           newsSlider.insertBefore(slide, newsSlider.firstChild); // insert before buttons
           return slide;
         });

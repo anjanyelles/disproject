@@ -1018,12 +1018,7 @@
 </h1>
 
 
-  <!-- <div class="news-slider3" id="newsSlider"  style="height: 80vh;width: 80vw !important;">
-    <div class="nav-buttons">
-      <button onclick="showPreviousSlide()">&#8592;</button>
-      <button onclick="showNextSlide()">&#8594;</button>
-    </div>
-  </div> -->   
+
   
 
   <!-- ====== Banner Section End -->
@@ -3203,75 +3198,7 @@
   </script>
 
 
-<script>
-  const apiKey = '9454d5a4d97049d4a93da02a1e6e4ae3'; // 🔁 Your NewsAPI Key
-  const url = `https://corsproxy.io/?https://newsapi.org/v2/everything?q=HR&language=en&sortBy=publishedAt&pageSize=100&apiKey=9454d5a4d97049d4a93da02a1e6e4ae3`;
 
-  let currentIndex = 0;
-  let newsSlides = [];
-  let autoScroll;
-  console.log('Total slides loaded:', newsSlides.length);
-
-  function fetchNews() {
-    fetch(url)
-      .then(res => res.json())
-      .then(data => {
-        const newsSlider = document.getElementById('newsSlider');
-        newsSlider.innerHTML += ''; // clear only slide part (buttons are already there)
-
-        newsSlides = data.articles.map((article, index) => {
-          const slide = document.createElement('div');
-          slide.className = 'news-slide' + (index === 0 ? ' active' : '');
-          slide.innerHTML = `
-  <div class="row rowdiv">
-    <img src="${article.urlToImage || 'https://via.placeholder.com/600x300'}" alt="News Image" class="imageSlide">
-    <div class="rowfile">
-      <h3><a href="${article.url}" target="_blank">${article.title}</a></h3>
-      <p>${article.description || ''}</p>
-    </div>
-  </div>
-    `;
-          newsSlider.insertBefore(slide, newsSlider.firstChild); // insert before buttons
-          return slide;
-        });
-
-        startAutoScroll();
-      })
-      .catch(err => {
-        console.error('Error fetching news:', err);
-      });
-  }
-
-  function showSlide(index) {
-    if (newsSlides.length === 0) return;
-    newsSlides[currentIndex].classList.remove('active');
-    currentIndex = (index + newsSlides.length) % newsSlides.length;
-    newsSlides[currentIndex].classList.add('active');
-  }
-
-  function showNextSlide() {
-    showSlide(currentIndex + 1);
-    resetAutoScroll();
-  }
-
-  function showPreviousSlide() {
-    showSlide(currentIndex - 1);
-    resetAutoScroll();
-  }
-
-  function startAutoScroll() {
-    autoScroll = setInterval(() => {
-      showNextSlide();
-    }, 2000); // Every 6 seconds
-  }
-
-  function resetAutoScroll() {
-    clearInterval(autoScroll);
-    startAutoScroll();
-  }
-
-  fetchNews();
-</script>
   <script>
 
     const myCarouselElement = document.querySelector('#myCarousel')

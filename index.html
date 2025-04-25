@@ -250,7 +250,7 @@
   }
 }
 
-.news-slider-container {
+.news-slider1-container {
   position: relative;
   width: 100%;
   max-width: 900px;
@@ -346,7 +346,7 @@
 
 
 
-  .news-slider {
+  .news-slider1 {
     max-width: 900px;
     margin: 40px auto;
     background: #fff;
@@ -1018,7 +1018,7 @@
 </h1>
 
 
-  <div class="news-slider11" id="newsSlider" style="height: 500px !important;width: 600px !important;">
+  <div class="news-slider1" id="newsSlider1" style="height: 500px !important;width: 600px !important;">
     <div class="nav-buttons">
       <p>seyfsdjfjhsdzfhjsdj</p>
       <button onclick="showPreviousSlide()">&#8592;</button>
@@ -3215,8 +3215,8 @@
     fetch(url)
       .then(res => res.json())
       .then(data => {
-        const newsSlider = document.getElementById('newsSlider');
-        newsSlider.innerHTML += ''; // clear only slide part (buttons are already there)
+        const newsSlider1 = document.getElementById('newsSlider1');
+        newsSlider1.innerHTML += ''; // clear only slide part (buttons are already there)
 
         newsSlides = data.articles.map((article, index) => {
           const slide = document.createElement('div');
@@ -3230,7 +3230,7 @@
     </div>
   </div>
   x `;
-          newsSlider.insertBefore(slide, newsSlider.firstChild); // insert before buttons
+          newsSlider1.insertBefore(slide, newsSlider1.firstChild); // insert before buttons
           return slide;
         });
 

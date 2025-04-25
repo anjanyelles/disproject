@@ -3205,10 +3205,12 @@
 
 <script>
   const apiKey = '9454d5a4d97049d4a93da02a1e6e4ae3'; // 🔁 Your NewsAPI Key
-  const url = `https://newsapi.org/v2/everything?q=HR&language=en&sortBy=publishedAt&pageSize=100&apiKey=${apiKey}`;
+  const url = `https://corsproxy.io/?https://newsapi.org/v2/everything?q=HR&language=en&sortBy=publishedAt&pageSize=100&apiKey=9454d5a4d97049d4a93da02a1e6e4ae3`;
+
   let currentIndex = 0;
   let newsSlides = [];
   let autoScroll;
+  console.log('Total slides loaded:', newsSlides.length);
 
   function fetchNews() {
     fetch(url)

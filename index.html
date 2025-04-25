@@ -250,7 +250,7 @@
   }
 }
 
-.news-slider-container {
+.news-slider3-container {
   position: relative;
   width: 100%;
   max-width: 900px;
@@ -346,7 +346,7 @@
 
 
 
-  .news-slider {
+  .news-slider3 {
     max-width: 900px;
     margin: 40px auto;
     background: #fff;
@@ -1018,7 +1018,7 @@
 </h1>
 
 
-  <div class="news-slider" id="newsSlider">
+  <div class="news-slider3" id="newsSlider6">
     <div class="nav-buttons6">
       <!-- <button onclick="showPreviousSlide()">&#8592;</button>
       <button onclick="showNextSlide()">&#8594;</button> -->
@@ -1030,7 +1030,7 @@
 
 
 
-
+    
 
   <!-- <div id="home" class="relative overflow-hidden bg-primary pt-[120px] md:pt-[130px] lg:pt-[160px]">
     <div class="container">
@@ -3214,8 +3214,8 @@
     fetch(url)
       .then(res => res.json())
       .then(data => {
-        const newsSlider = document.getElementById('newsSlider');
-        newsSlider.innerHTML += ''; // clear only slide part (buttons are already there)
+        const newsSlider6 = document.getElementById('newsSlider6');
+        newsSlider6.innerHTML += ''; // clear only slide part (buttons are already there)
 
         newsSlides = data.articles.map((article, index) => {
           const slide = document.createElement('div');
@@ -3229,7 +3229,7 @@
     </div>
   </div>
     `;
-          newsSlider.insertBefore(slide, newsSlider.firstChild); // insert before buttons
+          newsSlider6.insertBefore(slide, newsSlider6.firstChild); // insert before buttons
           return slide;
         });
 

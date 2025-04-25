@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News API Slider</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .news-slider-container {
+            max-width: 800px;
+            margin: 30px auto;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        
+        .news-slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .news-item {
+            min-width: 100%;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 4px solid #3498db;
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+        }
+        
+        .news-item h3 {
+            color: #333;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        
+        .news-item p {
+            color: #666;
+            margin-bottom: 10px;
+            flex-grow: 1;
+            overflow: hidden;
+        }
+        
+        .news-item .date {
+            color: #999;
+            font-size: 0.8em;
+        }
+        
+        .news-item .source {
+            font-weight: bold;
+            color: #3498db;
+            margin-top: 5px;
+        }
+        
+        .news-item a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .news-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .slider-navigation {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .slider-dot.active {
+            background: #3498db;
+        }
+        
+        .slider-arrows {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            pointer-events: auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .arrow-left {
+            left: 10px;
+        }
+        
+        .arrow-right {
+            right: 10px;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 18px;
+            color: #666;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 40px;
+            font-size: 18px;
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="news-slider-container">
+        <div class="news-slider">
+            <div class="loading">Loading news...</div>
+        </div>
+        
+        <div class="slider-navigation">
+            <!-- Navigation dots will be added dynamically -->
+        </div>
+        
+        <div class="slider-arrows">
+            <div class="arrow arrow-left">&#10094;</div>
+            <div class="arrow arrow-right">&#10095;</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.news-slider');
+            const sliderNavigation = document.querySelector('.slider-navigation');
+            const leftArrow = document.querySelector('.arrow-left');
+            const rightArrow = document.querySelector('.arrow-right');
+            
+            let currentIndex = 0;
+            let articles = [];
+            let slideInterval;
+            
+            // Fetch news from the API
+            async function fetchNews() {
+                // IMPORTANT: Replace 'YOUR_API_KEY' with your actual API key from newsapi.org
+                const apiKey = '9454d5a4d97049d4a93da02a1e6e4ae3';
+                const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
+                
+                try {
+                    const response = await fetch(url);
+                    const data = await response.json();
+                    
+                    if (data.status === 'ok' && data.articles && data.articles.length > 0) {
+                        articles = data.articles.slice(0, 10); // Get top 10 articles
+                        renderNews();
+                        setupSlider();
+                    } else {
+                        showError('No news available at the moment.');
+                    }
+                } catch (error) {
+                    showError('Failed to fetch news. Please try again later.');
+                    console.error('Error fetching news:', error);
+                }
+            }
+            
+            // Render news items to the slider
+            function renderNews() {
+                slider.innerHTML = '';
+                
+                articles.forEach(article => {
+                    const date = new Date(article.publishedAt).toLocaleDateString();
+                    const newsItem = document.createElement('div');
+                    newsItem.className = 'news-item';
+                    
+                    newsItem.innerHTML = `
+                        <h3>${article.title}</h3>
+                        <p>${article.description || 'No description available.'}</p>
+                        <span class="date">${date}</span>
+                        <span class="source">Source: ${article.source.name}</span>
+                        <a href="${article.url}" target="_blank">Read more</a>
+                    `;
+                    
+                    slider.appendChild(newsItem);
+                });
+                
+                // Create navigation dots
+                sliderNavigation.innerHTML = '';
+                articles.forEach((_, index) => {
+                    const dot = document.createElement('div');
+                    dot.className = `slider-dot ${index === 0 ? 'active' : ''}`;
+                    dot.addEventListener('click', function() {
+                        currentIndex = index;
+                        updateSlider();
+                        resetInterval();
+                    });
+                    sliderNavigation.appendChild(dot);
+                });
+            }
+            
+            // Show error message
+            function showError(message) {
+                slider.innerHTML = `<div class="error">${message}</div>`;
+            }
+            
+            // Setup slider functionality
+            function setupSlider() {
+                // Auto slide function
+                function autoSlide() {
+                    currentIndex = (currentIndex + 1) % articles.length;
+                    updateSlider();
+                }
+                
+                // Set interval for auto sliding
+                slideInterval = setInterval(autoSlide, 6000);
+                
+                // Click events for arrows
+                leftArrow.addEventListener('click', function() {
+                    currentIndex = (currentIndex - 1 + articles.length) % articles.length;
+                    updateSlider();
+                    resetInterval();
+                });
+                
+                rightArrow.addEventListener('click', function() {
+                    currentIndex = (currentIndex + 1) % articles.length;
+                    updateSlider();
+                    resetInterval();
+                });
+                
+                // Reset interval when manually navigating
+                function resetInterval() {
+                    clearInterval(slideInterval);
+                    slideInterval = setInterval(autoSlide, 6000);
+                }
+                
+                // Pause auto-sliding when hovering over the slider
+                const sliderContainer = document.querySelector('.news-slider-container');
+                sliderContainer.addEventListener('mouseenter', function() {
+                    clearInterval(slideInterval);
+                });
+                
+                sliderContainer.addEventListener('mouseleave', function() {
+                    slideInterval = setInterval(autoSlide, 6000);
+                });
+                
+                // Initial update
+                updateSlider();
+            }
+            
+            // Update slider position and active dot
+            function updateSlider() {
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Update active dot
+                const dots = document.querySelectorAll('.slider-dot');
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+            
+            // Initialize
+            fetchNews();
+        });
+    </script>
+</body>
+</html>

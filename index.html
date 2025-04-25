@@ -1018,7 +1018,7 @@
 </h1>
 
 
-  <div class="news-slider3" id="newsSlider6"  style="height: 80vh;width: 80vw !important;">
+  <div class="news-slider3" id="newsSlider"  style="height: 80vh;width: 80vw !important;">
     <div class="nav-buttons">
       <button onclick="showPreviousSlide()">&#8592;</button>
       <button onclick="showNextSlide()">&#8594;</button>
@@ -3214,8 +3214,8 @@
     fetch(url)
       .then(res => res.json())
       .then(data => {
-        const newsSlider6 = document.getElementById('newsSlider6');
-        newsSlider6.innerHTML += ''; // clear only slide part (buttons are already there)
+        const newsSlider = document.getElementById('newsSlider');
+        newsSlider.innerHTML += ''; // clear only slide part (buttons are already there)
 
         newsSlides = data.articles.map((article, index) => {
           const slide = document.createElement('div');
@@ -3229,7 +3229,7 @@
     </div>
   </div>
     `;
-          newsSlider6.insertBefore(slide, newsSlider6.firstChild); // insert before buttons
+          newsSlider.insertBefore(slide, newsSlider.firstChild); // insert before buttons
           return slide;
         });
 
